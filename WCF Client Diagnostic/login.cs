@@ -25,18 +25,6 @@ namespace WCF_Client_Diagnostic
             sendpassword();
 
           
-
-           refwcf.Service1Client client = new refwcf.Service1Client();
-           var hmm = client.Authentication(crypt.encrypt(textBox2.Text), crypt.encrypt(maskedTextBox1.Text));
-            if (hmm == true)
-            {
-                MessageBox.Show("good");
-                // next form
-            }
-            else
-            {
-                MessageBox.Show("bad");
-            }
         }
 
 
@@ -60,12 +48,22 @@ namespace WCF_Client_Diagnostic
                 else
                 {
 
-                    Crypt.cryptLogin = crypt.encrypt(maskedTextBox1.Text);
-                    Crypt.cryptPassword = crypt.encrypt(textBox2.Text);
-                    //MessageBox.Show("Zalogowany");
-                    //Form1 m = new Form1();
-                    //m.Show();
-                    //this.Hide();
+                    refwcf.Service1Client client = new refwcf.Service1Client();
+                    var hmm = client.Authentication(crypt.encrypt(textBox2.Text), crypt.encrypt(maskedTextBox1.Text));
+                    if (hmm == true)
+                    {
+                        Crypt.cryptLogin = textBox2.Text;
+                        Crypt.cryptPassword = maskedTextBox1.Text;
+                        MessageBox.Show("good");
+                        Menu m = new Menu();
+                        m.Show();
+                        this.Hide();
+                        // next form
+                    }
+                    else
+                    {
+                        MessageBox.Show("bad");
+                    }
                 }
             }
             catch(Exception e)
@@ -84,6 +82,11 @@ namespace WCF_Client_Diagnostic
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }

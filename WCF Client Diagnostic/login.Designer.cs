@@ -49,6 +49,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(270, 24);
             this.textBox2.TabIndex = 2;
+            this.textBox2.Text = "Michael";
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             // 
             // maskedTextBox1
@@ -58,6 +59,7 @@
             this.maskedTextBox1.PasswordChar = '#';
             this.maskedTextBox1.Size = new System.Drawing.Size(270, 24);
             this.maskedTextBox1.TabIndex = 7;
+            this.maskedTextBox1.Text = "1234";
             this.maskedTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.maskedTextBox1_KeyDown);
             // 
             // label1
@@ -138,6 +140,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(408, 23);
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Login
             // 
