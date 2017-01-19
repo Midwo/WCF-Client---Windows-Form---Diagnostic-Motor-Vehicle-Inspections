@@ -19,30 +19,6 @@ namespace WCF_Client_Diagnostic
             label2.Text = "";
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
