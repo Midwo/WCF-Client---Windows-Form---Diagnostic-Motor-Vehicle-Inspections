@@ -63,9 +63,39 @@ namespace WCF_Client_Diagnostic.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_car_11_240 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-car-11-240", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconmonstr_checkbox_2_240 {
             get {
                 object obj = ResourceManager.GetObject("iconmonstr-checkbox-2-240", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_checkbox_20_240 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-checkbox-20-240", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_redo_4_240 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-redo-4-240", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

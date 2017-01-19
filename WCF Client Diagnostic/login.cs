@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace WCF_Client_Diagnostic
 {
-    public partial class login : Form
+    public partial class Login : Form
     {
-        public login()
+        public Login()
         {
             InitializeComponent();
         }
@@ -23,12 +23,23 @@ namespace WCF_Client_Diagnostic
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             sendpassword();
+
+          
+
+           refwcf.Service1Client client = new refwcf.Service1Client();
+           var hmm = client.Authentication(crypt.encrypt(textBox2.Text), crypt.encrypt(maskedTextBox1.Text));
+            if (hmm == true)
+            {
+                MessageBox.Show("good");
+                // next form
+            }
+            else
+            {
+                MessageBox.Show("bad");
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            sendpassword();
-        }
+
 
         private void maskedTextBox1_KeyDown(object sender, KeyEventArgs e)
         {
