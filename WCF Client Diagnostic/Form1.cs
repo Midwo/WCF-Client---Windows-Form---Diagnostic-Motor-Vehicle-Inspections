@@ -15,6 +15,7 @@ namespace WCF_Client_Diagnostic
         public Form1()
         {
             InitializeComponent();
+         
         }
     }
 }
