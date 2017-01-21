@@ -106,6 +106,9 @@
     <None Include="Service References\refwcf\Service12.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\refwcf\WCF_Client_Diagnostic.refwcf.CarCondition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\refwcf\WCF_Client_Diagnostic.refwcf.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -115,6 +118,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\iconmonstr-wrench-24-240.png" />
+    <None Include="Resources\iconmonstr-edit-9-240.png" />
+    <None Include="Resources\iconmonstr-wrench-21-240.png" />
+    <None Include="Resources\iconmonstr-wrench-12-240.png" />
     <None Include="Resources\iconmonstr-plus-4-240.png" />
     <None Include="Resources\iconmonstr-wrench-13-240.png" />
     <None Include="Resources\iconmonstr-car-11-240%281%29.png" />

@@ -17,9 +17,17 @@ namespace WCF_Client_Diagnostic
             InitializeComponent();
             toolStripStatusLabel1.Text = "Welcome, " + Crypt.cryptLogin;
             label2.Text = "";
+
+            //refwcf.Service1Client client1 = new refwcf.Service1Client();
+            //Array valArray = typeof(WCF_Client_Diagnostic.refwcf.CarCondition).GetEnumValues();
+            //foreach (object obj in valArray)
+            //{
+            //    listBox1.Items.Add(obj);
+            //}
+            timer1.Start();
         }
 
-
+       
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text.Trim() != string.Empty)
@@ -49,6 +57,11 @@ namespace WCF_Client_Diagnostic
             {
                 button1_Click( e, null);
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label6.Text = System.DateTime.Now.ToLongTimeString();
         }
     }
 }

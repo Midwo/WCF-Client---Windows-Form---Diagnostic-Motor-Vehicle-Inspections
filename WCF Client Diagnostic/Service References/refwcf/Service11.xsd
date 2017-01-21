@@ -7,4 +7,21 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
+  <xs:complexType name="Car">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="condition" type="tns:CarCondition" />
+      <xs:element minOccurs="0" name="model" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Car" nillable="true" type="tns:Car" />
+  <xs:simpleType name="CarCondition">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="New" />
+      <xs:enumeration value="Used" />
+      <xs:enumeration value="Rental" />
+      <xs:enumeration value="Broken" />
+      <xs:enumeration value="Stolen" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CarCondition" nillable="true" type="tns:CarCondition" />
 </xs:schema>

@@ -74,6 +74,87 @@ namespace WCF_Client_Diagnostic.refwcf {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Car", Namespace="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic")]
+    [System.SerializableAttribute()]
+    public partial class Car : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private WCF_Client_Diagnostic.refwcf.CarCondition conditionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string modelField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public WCF_Client_Diagnostic.refwcf.CarCondition condition {
+            get {
+                return this.conditionField;
+            }
+            set {
+                if ((this.conditionField.Equals(value) != true)) {
+                    this.conditionField = value;
+                    this.RaisePropertyChanged("condition");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string model {
+            get {
+                return this.modelField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.modelField, value) != true)) {
+                    this.modelField = value;
+                    this.RaisePropertyChanged("model");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CarCondition", Namespace="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic")]
+    public enum CarCondition : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        New = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Used = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Rental = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Broken = 3,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Stolen = 4,
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="refwcf.IService1")]
     public interface IService1 {
@@ -95,6 +176,12 @@ namespace WCF_Client_Diagnostic.refwcf {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Authentication", ReplyAction="http://tempuri.org/IService1/AuthenticationResponse")]
         System.Threading.Tasks.Task<bool> AuthenticationAsync(string loginNamecrypt, string passwordcrypt);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/hmm", ReplyAction="http://tempuri.org/IService1/hmmResponse")]
+        WCF_Client_Diagnostic.refwcf.CarCondition hmm(WCF_Client_Diagnostic.refwcf.Car all);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/hmm", ReplyAction="http://tempuri.org/IService1/hmmResponse")]
+        System.Threading.Tasks.Task<WCF_Client_Diagnostic.refwcf.CarCondition> hmmAsync(WCF_Client_Diagnostic.refwcf.Car all);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -146,6 +233,14 @@ namespace WCF_Client_Diagnostic.refwcf {
         
         public System.Threading.Tasks.Task<bool> AuthenticationAsync(string loginNamecrypt, string passwordcrypt) {
             return base.Channel.AuthenticationAsync(loginNamecrypt, passwordcrypt);
+        }
+        
+        public WCF_Client_Diagnostic.refwcf.CarCondition hmm(WCF_Client_Diagnostic.refwcf.Car all) {
+            return base.Channel.hmm(all);
+        }
+        
+        public System.Threading.Tasks.Task<WCF_Client_Diagnostic.refwcf.CarCondition> hmmAsync(WCF_Client_Diagnostic.refwcf.Car all) {
+            return base.Channel.hmmAsync(all);
         }
     }
 }

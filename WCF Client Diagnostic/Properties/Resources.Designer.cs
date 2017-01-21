@@ -103,6 +103,16 @@ namespace WCF_Client_Diagnostic.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_edit_9_240 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-edit-9-240", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconmonstr_plus_4_240 {
             get {
                 object obj = ResourceManager.GetObject("iconmonstr-plus-4-240", resourceCulture);
@@ -123,9 +133,39 @@ namespace WCF_Client_Diagnostic.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_wrench_12_240 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-wrench-12-240", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconmonstr_wrench_13_240 {
             get {
                 object obj = ResourceManager.GetObject("iconmonstr-wrench-13-240", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_wrench_21_240 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-wrench-21-240", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_wrench_24_240 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-wrench-24-240", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

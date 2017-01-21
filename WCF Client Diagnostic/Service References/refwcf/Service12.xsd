@@ -44,4 +44,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="hmm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic" minOccurs="0" name="all" nillable="true" type="q3:Car" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="hmmResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic" minOccurs="0" name="hmmResult" type="q4:CarCondition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
