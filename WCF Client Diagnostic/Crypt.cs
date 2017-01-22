@@ -16,7 +16,8 @@ namespace WCF_Client_Diagnostic
         string SaltKey = "HMM;_;SALTaha@#";
         string VIKey = "@2JJhjD4emoka%!!!";
 
-        static public string cryptLogin;
+        
+        public static string cryptLogin;
         public static string cryptPassword;
 
         public string encrypt(string password)

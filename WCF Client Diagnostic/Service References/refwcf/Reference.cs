@@ -153,6 +153,12 @@ namespace WCF_Client_Diagnostic.refwcf {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
         Stolen = 4,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        chyj = 5,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        cipa = 6,
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -182,6 +188,12 @@ namespace WCF_Client_Diagnostic.refwcf {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/hmm", ReplyAction="http://tempuri.org/IService1/hmmResponse")]
         System.Threading.Tasks.Task<WCF_Client_Diagnostic.refwcf.CarCondition> hmmAsync(WCF_Client_Diagnostic.refwcf.Car all);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getstartwork", ReplyAction="http://tempuri.org/IService1/getstartworkResponse")]
+        string getstartwork(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getstartwork", ReplyAction="http://tempuri.org/IService1/getstartworkResponse")]
+        System.Threading.Tasks.Task<string> getstartworkAsync(string name);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -241,6 +253,14 @@ namespace WCF_Client_Diagnostic.refwcf {
         
         public System.Threading.Tasks.Task<WCF_Client_Diagnostic.refwcf.CarCondition> hmmAsync(WCF_Client_Diagnostic.refwcf.Car all) {
             return base.Channel.hmmAsync(all);
+        }
+        
+        public string getstartwork(string name) {
+            return base.Channel.getstartwork(name);
+        }
+        
+        public System.Threading.Tasks.Task<string> getstartworkAsync(string name) {
+            return base.Channel.getstartworkAsync(name);
         }
     }
 }

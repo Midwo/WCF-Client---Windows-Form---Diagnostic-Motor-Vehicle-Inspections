@@ -18,7 +18,10 @@ namespace WCF_Client_Diagnostic
             toolStripStatusLabel1.Text = "Welcome, " + Crypt.cryptLogin;
             label2.Text = "";
 
-            //refwcf.Service1Client client1 = new refwcf.Service1Client();
+
+            refwcf.Service1Client client1 = new refwcf.Service1Client();
+            label18.Text = String.Format("Start of work: {0}", client1.getstartwork(Crypt.cryptLogin));
+
             //Array valArray = typeof(WCF_Client_Diagnostic.refwcf.CarCondition).GetEnumValues();
             //foreach (object obj in valArray)
             //{
@@ -32,13 +35,17 @@ namespace WCF_Client_Diagnostic
         {
             if (textBox1.Text.Trim() != string.Empty)
             {
-                if (textBox1.Text.Length > 17)
+                if (textBox1.Text.Length != 17)
                 {
-                    MessageBox.Show("Vin number is to long!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);              
-                }
-                if (textBox1.Text.Length < 17)
-                {
-                    MessageBox.Show("Vin number is to short!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
+                    if (textBox1.Text.Length < 17)
+                    {
+                        MessageBox.Show("Vin number is to short!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Vin number is to long!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+                    }
                 }
                 else
                 {
@@ -62,6 +69,17 @@ namespace WCF_Client_Diagnostic
         private void timer1_Tick(object sender, EventArgs e)
         {
             label6.Text = System.DateTime.Now.ToLongTimeString();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            AddCarReview m = new AddCarReview();
+            m.Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            pictureBox1_Click(e, null);
         }
     }
 }
