@@ -54,7 +54,7 @@ namespace WCF_Client_Diagnostic
                     {
                         Crypt.cryptLogin = textBox2.Text;
                         Crypt.cryptPassword = maskedTextBox1.Text;
-                        MessageBox.Show("good");
+                        MessageBox.Show("Welcome to MD WCF Client Diagnostic Motor Vehicle Inspections\nYou used login: "+textBox2.Text+"", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information );
                         Menu m = new Menu();
                         m.Show();
                         this.Hide();
@@ -81,14 +81,8 @@ namespace WCF_Client_Diagnostic
            
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
+       
 
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
+     
     }
 }

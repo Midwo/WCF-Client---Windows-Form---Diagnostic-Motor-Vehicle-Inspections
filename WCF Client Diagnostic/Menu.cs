@@ -73,13 +73,112 @@ namespace WCF_Client_Diagnostic
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            AddCarReview m = new AddCarReview();
-            m.Show();
+            using (AddCarReview m = new AddCarReview())
+            {
+                m.ShowDialog(this);
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
             pictureBox1_Click(e, null);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            ShowHistoryReview m = new ShowHistoryReview();
+            m.Show();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            pictureBox2_Click(e, null);
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            using (EditCarReview m = new EditCarReview())
+            {
+                m.ShowDialog(this);
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            pictureBox3_Click(e, null);
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            pictureBox4_Click(e, null);
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            using (AddCarRepair m = new AddCarRepair())
+            {
+                m.ShowDialog();
+            }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            using(EditCarRepair m = new EditCarRepair())
+            {
+                m.ShowDialog();
+            }
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            pictureBox5_Click(e, null);
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            ShowHistoryRepair m = new ShowHistoryRepair();
+            m.Show();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            pictureBox6_Click(e, null);
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            using (NewOrder m = new NewOrder())
+            {
+                m.ShowDialog();
+            }
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            pictureBox8_Click(e, null);
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            pictureBox7_Click(e, null);
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            Bill m = new Bill();
+            m.ShowDialog();
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+            pictureBox9_Click(e, null);
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            OrderHistory m = new OrderHistory();
+            m.Show();
         }
     }
 }

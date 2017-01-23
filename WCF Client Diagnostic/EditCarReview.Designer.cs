@@ -1,6 +1,6 @@
 ﻿namespace WCF_Client_Diagnostic
 {
-    partial class AddCarReview
+    partial class EditCarReview
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // AddCarReview
+            // EditCarReview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 261);
-            this.Name = "AddCarReview";
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "EditCarReview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "addcarreview";
+            this.Text = "EditCarReview";
             this.ResumeLayout(false);
 
         }
