@@ -153,12 +153,6 @@ namespace WCF_Client_Diagnostic.refwcf {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
         Stolen = 4,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        chyj = 5,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        cipa = 6,
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -194,6 +188,12 @@ namespace WCF_Client_Diagnostic.refwcf {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getstartwork", ReplyAction="http://tempuri.org/IService1/getstartworkResponse")]
         System.Threading.Tasks.Task<string> getstartworkAsync(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Business_employe", ReplyAction="http://tempuri.org/IService1/Business_employeResponse")]
+        System.Data.DataSet Business_employe(string login);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Business_employe", ReplyAction="http://tempuri.org/IService1/Business_employeResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> Business_employeAsync(string login);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -261,6 +261,14 @@ namespace WCF_Client_Diagnostic.refwcf {
         
         public System.Threading.Tasks.Task<string> getstartworkAsync(string name) {
             return base.Channel.getstartworkAsync(name);
+        }
+        
+        public System.Data.DataSet Business_employe(string login) {
+            return base.Channel.Business_employe(login);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> Business_employeAsync(string login) {
+            return base.Channel.Business_employeAsync(login);
         }
     }
 }

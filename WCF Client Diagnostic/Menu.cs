@@ -15,7 +15,7 @@ namespace WCF_Client_Diagnostic
         public Menu()
         {
             InitializeComponent();
-            toolStripStatusLabel1.Text = "Welcome, " + Crypt.cryptLogin;
+            toolStripStatusLabel1.Text = "Welcome, " + Crypt.cryptLogin + " with " + GlobalInformation.Name_Business + " : " + GlobalInformation.Adress_Business ;
             label2.Text = "";
 
 

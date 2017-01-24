@@ -21,8 +21,6 @@
       <xs:enumeration value="Rental" />
       <xs:enumeration value="Broken" />
       <xs:enumeration value="Stolen" />
-      <xs:enumeration value="chyj" />
-      <xs:enumeration value="cipa" />
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="CarCondition" nillable="true" type="tns:CarCondition" />

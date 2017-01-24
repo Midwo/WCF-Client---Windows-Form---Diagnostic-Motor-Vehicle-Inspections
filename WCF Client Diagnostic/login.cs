@@ -54,7 +54,11 @@ namespace WCF_Client_Diagnostic
                     {
                         Crypt.cryptLogin = textBox2.Text;
                         Crypt.cryptPassword = maskedTextBox1.Text;
+
                         MessageBox.Show("Welcome to MD WCF Client Diagnostic Motor Vehicle Inspections\nYou used login: "+textBox2.Text+"", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information );
+                        DataSet dsresponse = client.Business_employe(crypt.encrypt(textBox2.Text));
+                        GlobalInformation.Name_Business = dsresponse.Tables[0].Rows[0][0].ToString();
+                        GlobalInformation.Adress_Business = dsresponse.Tables[0].Rows[0][1].ToString();
                         Menu m = new Menu();
                         m.Show();
                         this.Hide();
