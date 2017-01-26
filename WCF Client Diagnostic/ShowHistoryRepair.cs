@@ -15,6 +15,24 @@ namespace WCF_Client_Diagnostic
         public ShowHistoryRepair()
         {
             InitializeComponent();
+
+
+
+            refwcf.Service1Client client = new refwcf.Service1Client();
+            DataSet DsResponse = client.ShowRepairTable(GlobalInformation.VIN);
+   
+            if (GlobalInformation.VIN == null || DsResponse.Tables[0].Rows.Count < 1)
+            {
+
+                GlobalInformation.Error = 1;
+                Close();
+            }
+            else
+            {
+
+                dataGridView1.DataSource = DsResponse.Tables[0];
+                GlobalInformation.Error = 0;
+            }
         }
     }
 }

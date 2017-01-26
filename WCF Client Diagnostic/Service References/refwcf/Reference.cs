@@ -194,6 +194,24 @@ namespace WCF_Client_Diagnostic.refwcf {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Business_employe", ReplyAction="http://tempuri.org/IService1/Business_employeResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> Business_employeAsync(string login);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ShowReviewsTable", ReplyAction="http://tempuri.org/IService1/ShowReviewsTableResponse")]
+        System.Data.DataSet ShowReviewsTable(string VIN);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ShowReviewsTable", ReplyAction="http://tempuri.org/IService1/ShowReviewsTableResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> ShowReviewsTableAsync(string VIN);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ShowRepairTable", ReplyAction="http://tempuri.org/IService1/ShowRepairTableResponse")]
+        System.Data.DataSet ShowRepairTable(string VIN);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ShowRepairTable", ReplyAction="http://tempuri.org/IService1/ShowRepairTableResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> ShowRepairTableAsync(string VIN);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ShowOrderTable", ReplyAction="http://tempuri.org/IService1/ShowOrderTableResponse")]
+        System.Data.DataSet ShowOrderTable(string BusinessName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ShowOrderTable", ReplyAction="http://tempuri.org/IService1/ShowOrderTableResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> ShowOrderTableAsync(string BusinessName);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -269,6 +287,30 @@ namespace WCF_Client_Diagnostic.refwcf {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> Business_employeAsync(string login) {
             return base.Channel.Business_employeAsync(login);
+        }
+        
+        public System.Data.DataSet ShowReviewsTable(string VIN) {
+            return base.Channel.ShowReviewsTable(VIN);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> ShowReviewsTableAsync(string VIN) {
+            return base.Channel.ShowReviewsTableAsync(VIN);
+        }
+        
+        public System.Data.DataSet ShowRepairTable(string VIN) {
+            return base.Channel.ShowRepairTable(VIN);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> ShowRepairTableAsync(string VIN) {
+            return base.Channel.ShowRepairTableAsync(VIN);
+        }
+        
+        public System.Data.DataSet ShowOrderTable(string BusinessName) {
+            return base.Channel.ShowOrderTable(BusinessName);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> ShowOrderTableAsync(string BusinessName) {
+            return base.Channel.ShowOrderTableAsync(BusinessName);
         }
     }
 }

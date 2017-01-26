@@ -16,6 +16,7 @@ namespace WCF_Client_Diagnostic
         {
             InitializeComponent();
             toolStripStatusLabel1.Text = "Welcome, " + Crypt.cryptLogin + " with " + GlobalInformation.Name_Business + " : " + GlobalInformation.Adress_Business ;
+
             label2.Text = "";
 
 
@@ -50,6 +51,8 @@ namespace WCF_Client_Diagnostic
                 else
                 {
                     label2.Text = String.Format("Save VIN: {0}", textBox1.Text);
+                    GlobalInformation.VIN = textBox1.Text;
+                    textBox1.Clear();
                 }
             }
             else
@@ -86,8 +89,23 @@ namespace WCF_Client_Diagnostic
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+       
             ShowHistoryReview m = new ShowHistoryReview();
-            m.Show();
+            if (label2.Text.Trim() != string.Empty)
+            {
+                if (GlobalInformation.Error == 1)
+                {
+                    MessageBox.Show("Not found this number VIN", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    m.Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter number Vin", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -136,8 +154,22 @@ namespace WCF_Client_Diagnostic
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            ShowHistoryRepair m = new ShowHistoryRepair();
-            m.Show();
+            if (label2.Text.Trim() != string.Empty)
+            {
+                ShowHistoryRepair m = new ShowHistoryRepair();
+                if (GlobalInformation.Error == 1)
+                {
+                    MessageBox.Show("Not found this number VIN", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    m.Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter number Vin", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -177,8 +209,16 @@ namespace WCF_Client_Diagnostic
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
+
             OrderHistory m = new OrderHistory();
-            m.Show();
+            if (GlobalInformation.Error == 1)
+            {
+                MessageBox.Show("Not found your orders", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                m.Show();
+            }
         }
     }
 }

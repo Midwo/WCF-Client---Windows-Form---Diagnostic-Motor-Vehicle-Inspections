@@ -44,6 +44,24 @@
   <wsdl:message name="IService1_Business_employe_OutputMessage">
     <wsdl:part name="parameters" element="tns:Business_employeResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_ShowReviewsTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowReviewsTable" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowReviewsTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowReviewsTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowRepairTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowRepairTable" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowRepairTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowRepairTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowOrderTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowOrderTable" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowOrderTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowOrderTableResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -68,6 +86,18 @@
     <wsdl:operation name="Business_employe">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/Business_employe" message="tns:IService1_Business_employe_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/Business_employeResponse" message="tns:IService1_Business_employe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowReviewsTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowReviewsTable" message="tns:IService1_ShowReviewsTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowReviewsTableResponse" message="tns:IService1_ShowReviewsTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowRepairTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowRepairTable" message="tns:IService1_ShowRepairTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowRepairTableResponse" message="tns:IService1_ShowRepairTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowOrderTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowOrderTable" message="tns:IService1_ShowOrderTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowOrderTableResponse" message="tns:IService1_ShowOrderTable_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -119,6 +149,33 @@
     </wsdl:operation>
     <wsdl:operation name="Business_employe">
       <soap:operation soapAction="http://tempuri.org/IService1/Business_employe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowReviewsTable">
+      <soap:operation soapAction="http://tempuri.org/IService1/ShowReviewsTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowRepairTable">
+      <soap:operation soapAction="http://tempuri.org/IService1/ShowRepairTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowOrderTable">
+      <soap:operation soapAction="http://tempuri.org/IService1/ShowOrderTable" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
