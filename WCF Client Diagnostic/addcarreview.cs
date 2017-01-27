@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,16 @@ namespace WCF_Client_Diagnostic
         public AddCarReview()
         {
             InitializeComponent();
+
+            textBox1.Text = GlobalInformation.VIN;
+     
+            Array valArray = typeof(WCF_Client_Diagnostic.refwcf.fueltypeenum).GetEnumValues();
+            foreach (object obj in valArray)
+            {
+                comboBox1.Items.Add(obj);
+            }
+        
+       
         }
     }
 }

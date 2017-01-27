@@ -76,9 +76,16 @@ namespace WCF_Client_Diagnostic
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            using (AddCarReview m = new AddCarReview())
+            if (label2.Text.Trim() != string.Empty)
             {
-                m.ShowDialog(this);
+                using (AddCarReview m = new AddCarReview())
+                {
+                    m.ShowDialog(this);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Enter the number Vin", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -115,9 +122,16 @@ namespace WCF_Client_Diagnostic
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            using (EditCarReview m = new EditCarReview())
+            if (label2.Text.Trim() != string.Empty)
             {
-                m.ShowDialog(this);
+                using (EditCarReview m = new EditCarReview())
+                {
+                    m.ShowDialog(this);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter number Vin", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -133,17 +147,31 @@ namespace WCF_Client_Diagnostic
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            using (AddCarRepair m = new AddCarRepair())
+            if (label2.Text.Trim() != string.Empty)
             {
-                m.ShowDialog();
+                using (AddCarRepair m = new AddCarRepair())
+                {
+                    m.ShowDialog();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter number Vin", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            using(EditCarRepair m = new EditCarRepair())
+            if (label2.Text.Trim() != string.Empty)
             {
-                m.ShowDialog();
+                using (EditCarRepair m = new EditCarRepair())
+                {
+                    m.ShowDialog();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter number Vin", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -219,6 +247,11 @@ namespace WCF_Client_Diagnostic
             {
                 m.Show();
             }
+        }
+
+        private void Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -7,21 +7,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
-  <xs:complexType name="Car">
+  <xs:complexType name="Enums">
     <xs:sequence>
-      <xs:element minOccurs="0" name="condition" type="tns:CarCondition" />
-      <xs:element minOccurs="0" name="model" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="all" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fueltypeenum" type="tns:fueltypeenum" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="Car" nillable="true" type="tns:Car" />
-  <xs:simpleType name="CarCondition">
+  <xs:element name="Enums" nillable="true" type="tns:Enums" />
+  <xs:simpleType name="fueltypeenum">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="New" />
-      <xs:enumeration value="Used" />
-      <xs:enumeration value="Rental" />
-      <xs:enumeration value="Broken" />
-      <xs:enumeration value="Stolen" />
+      <xs:enumeration value="PB" />
+      <xs:enumeration value="LPG" />
+      <xs:enumeration value="Diesel" />
     </xs:restriction>
   </xs:simpleType>
-  <xs:element name="CarCondition" nillable="true" type="tns:CarCondition" />
+  <xs:element name="fueltypeenum" nillable="true" type="tns:fueltypeenum" />
 </xs:schema>

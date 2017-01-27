@@ -76,18 +76,18 @@ namespace WCF_Client_Diagnostic.refwcf {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Car", Namespace="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Enums", Namespace="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic")]
     [System.SerializableAttribute()]
-    public partial class Car : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class Enums : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WCF_Client_Diagnostic.refwcf.CarCondition conditionField;
+        private string allField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string modelField;
+        private WCF_Client_Diagnostic.refwcf.fueltypeenum fueltypeenumField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -100,27 +100,27 @@ namespace WCF_Client_Diagnostic.refwcf {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WCF_Client_Diagnostic.refwcf.CarCondition condition {
+        public string all {
             get {
-                return this.conditionField;
+                return this.allField;
             }
             set {
-                if ((this.conditionField.Equals(value) != true)) {
-                    this.conditionField = value;
-                    this.RaisePropertyChanged("condition");
+                if ((object.ReferenceEquals(this.allField, value) != true)) {
+                    this.allField = value;
+                    this.RaisePropertyChanged("all");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string model {
+        public WCF_Client_Diagnostic.refwcf.fueltypeenum fueltypeenum {
             get {
-                return this.modelField;
+                return this.fueltypeenumField;
             }
             set {
-                if ((object.ReferenceEquals(this.modelField, value) != true)) {
-                    this.modelField = value;
-                    this.RaisePropertyChanged("model");
+                if ((this.fueltypeenumField.Equals(value) != true)) {
+                    this.fueltypeenumField = value;
+                    this.RaisePropertyChanged("fueltypeenum");
                 }
             }
         }
@@ -136,23 +136,17 @@ namespace WCF_Client_Diagnostic.refwcf {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CarCondition", Namespace="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic")]
-    public enum CarCondition : int {
+    [System.Runtime.Serialization.DataContractAttribute(Name="fueltypeenum", Namespace="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic")]
+    public enum fueltypeenum : int {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        New = 0,
+        PB = 0,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Used = 1,
+        LPG = 1,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Rental = 2,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Broken = 3,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        Stolen = 4,
+        Diesel = 2,
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -177,11 +171,14 @@ namespace WCF_Client_Diagnostic.refwcf {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Authentication", ReplyAction="http://tempuri.org/IService1/AuthenticationResponse")]
         System.Threading.Tasks.Task<bool> AuthenticationAsync(string loginNamecrypt, string passwordcrypt);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/hmm", ReplyAction="http://tempuri.org/IService1/hmmResponse")]
-        WCF_Client_Diagnostic.refwcf.CarCondition hmm(WCF_Client_Diagnostic.refwcf.Car all);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/fueltypeget", ReplyAction="http://tempuri.org/IService1/fueltypegetResponse")]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WCF_Client_Diagnostic.refwcf.CompositeType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WCF_Client_Diagnostic.refwcf.Enums))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WCF_Client_Diagnostic.refwcf.fueltypeenum))]
+        object fueltypeget(WCF_Client_Diagnostic.refwcf.Enums all);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/hmm", ReplyAction="http://tempuri.org/IService1/hmmResponse")]
-        System.Threading.Tasks.Task<WCF_Client_Diagnostic.refwcf.CarCondition> hmmAsync(WCF_Client_Diagnostic.refwcf.Car all);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/fueltypeget", ReplyAction="http://tempuri.org/IService1/fueltypegetResponse")]
+        System.Threading.Tasks.Task<object> fueltypegetAsync(WCF_Client_Diagnostic.refwcf.Enums all);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getstartwork", ReplyAction="http://tempuri.org/IService1/getstartworkResponse")]
         string getstartwork(string name);
@@ -212,6 +209,12 @@ namespace WCF_Client_Diagnostic.refwcf {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ShowOrderTable", ReplyAction="http://tempuri.org/IService1/ShowOrderTableResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> ShowOrderTableAsync(string BusinessName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/NewReview", ReplyAction="http://tempuri.org/IService1/NewReviewResponse")]
+        string NewReview(string WhoReviewsBusinessName, string WhereReviewsBusinessName, string Mileage, string Colour, string WhoReviewEmployee, string Brakes, string Damper, string Exhaust, string Convergence, string light, string Vin, string fuel);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/NewReview", ReplyAction="http://tempuri.org/IService1/NewReviewResponse")]
+        System.Threading.Tasks.Task<string> NewReviewAsync(string WhoReviewsBusinessName, string WhereReviewsBusinessName, string Mileage, string Colour, string WhoReviewEmployee, string Brakes, string Damper, string Exhaust, string Convergence, string light, string Vin, string fuel);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -265,12 +268,12 @@ namespace WCF_Client_Diagnostic.refwcf {
             return base.Channel.AuthenticationAsync(loginNamecrypt, passwordcrypt);
         }
         
-        public WCF_Client_Diagnostic.refwcf.CarCondition hmm(WCF_Client_Diagnostic.refwcf.Car all) {
-            return base.Channel.hmm(all);
+        public object fueltypeget(WCF_Client_Diagnostic.refwcf.Enums all) {
+            return base.Channel.fueltypeget(all);
         }
         
-        public System.Threading.Tasks.Task<WCF_Client_Diagnostic.refwcf.CarCondition> hmmAsync(WCF_Client_Diagnostic.refwcf.Car all) {
-            return base.Channel.hmmAsync(all);
+        public System.Threading.Tasks.Task<object> fueltypegetAsync(WCF_Client_Diagnostic.refwcf.Enums all) {
+            return base.Channel.fueltypegetAsync(all);
         }
         
         public string getstartwork(string name) {
@@ -311,6 +314,14 @@ namespace WCF_Client_Diagnostic.refwcf {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> ShowOrderTableAsync(string BusinessName) {
             return base.Channel.ShowOrderTableAsync(BusinessName);
+        }
+        
+        public string NewReview(string WhoReviewsBusinessName, string WhereReviewsBusinessName, string Mileage, string Colour, string WhoReviewEmployee, string Brakes, string Damper, string Exhaust, string Convergence, string light, string Vin, string fuel) {
+            return base.Channel.NewReview(WhoReviewsBusinessName, WhereReviewsBusinessName, Mileage, Colour, WhoReviewEmployee, Brakes, Damper, Exhaust, Convergence, light, Vin, fuel);
+        }
+        
+        public System.Threading.Tasks.Task<string> NewReviewAsync(string WhoReviewsBusinessName, string WhereReviewsBusinessName, string Mileage, string Colour, string WhoReviewEmployee, string Brakes, string Damper, string Exhaust, string Convergence, string light, string Vin, string fuel) {
+            return base.Channel.NewReviewAsync(WhoReviewsBusinessName, WhereReviewsBusinessName, Mileage, Colour, WhoReviewEmployee, Brakes, Damper, Exhaust, Convergence, light, Vin, fuel);
         }
     }
 }

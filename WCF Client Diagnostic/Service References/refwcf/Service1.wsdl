@@ -26,11 +26,11 @@
   <wsdl:message name="IService1_Authentication_OutputMessage">
     <wsdl:part name="parameters" element="tns:AuthenticationResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_hmm_InputMessage">
-    <wsdl:part name="parameters" element="tns:hmm" />
+  <wsdl:message name="IService1_fueltypeget_InputMessage">
+    <wsdl:part name="parameters" element="tns:fueltypeget" />
   </wsdl:message>
-  <wsdl:message name="IService1_hmm_OutputMessage">
-    <wsdl:part name="parameters" element="tns:hmmResponse" />
+  <wsdl:message name="IService1_fueltypeget_OutputMessage">
+    <wsdl:part name="parameters" element="tns:fueltypegetResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_getstartwork_InputMessage">
     <wsdl:part name="parameters" element="tns:getstartwork" />
@@ -62,6 +62,12 @@
   <wsdl:message name="IService1_ShowOrderTable_OutputMessage">
     <wsdl:part name="parameters" element="tns:ShowOrderTableResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_NewReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewReview" />
+  </wsdl:message>
+  <wsdl:message name="IService1_NewReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewReviewResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -75,9 +81,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/Authentication" message="tns:IService1_Authentication_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/AuthenticationResponse" message="tns:IService1_Authentication_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="hmm">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/hmm" message="tns:IService1_hmm_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/hmmResponse" message="tns:IService1_hmm_OutputMessage" />
+    <wsdl:operation name="fueltypeget">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/fueltypeget" message="tns:IService1_fueltypeget_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/fueltypegetResponse" message="tns:IService1_fueltypeget_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getstartwork">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/getstartwork" message="tns:IService1_getstartwork_InputMessage" />
@@ -98,6 +104,10 @@
     <wsdl:operation name="ShowOrderTable">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowOrderTable" message="tns:IService1_ShowOrderTable_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowOrderTableResponse" message="tns:IService1_ShowOrderTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewReview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/NewReview" message="tns:IService1_NewReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/NewReviewResponse" message="tns:IService1_NewReview_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -129,8 +139,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="hmm">
-      <soap:operation soapAction="http://tempuri.org/IService1/hmm" style="document" />
+    <wsdl:operation name="fueltypeget">
+      <soap:operation soapAction="http://tempuri.org/IService1/fueltypeget" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -176,6 +186,15 @@
     </wsdl:operation>
     <wsdl:operation name="ShowOrderTable">
       <soap:operation soapAction="http://tempuri.org/IService1/ShowOrderTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewReview">
+      <soap:operation soapAction="http://tempuri.org/IService1/NewReview" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

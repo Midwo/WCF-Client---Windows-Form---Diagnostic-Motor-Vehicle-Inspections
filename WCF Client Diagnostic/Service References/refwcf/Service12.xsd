@@ -44,17 +44,17 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="hmm">
+  <xs:element name="fueltypeget">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic" minOccurs="0" name="all" nillable="true" type="q3:Car" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic" minOccurs="0" name="all" nillable="true" type="q3:Enums" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="hmmResponse">
+  <xs:element name="fueltypegetResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic" minOccurs="0" name="hmmResult" type="q4:CarCondition" />
+        <xs:element minOccurs="0" name="fueltypegetResult" nillable="true" type="xs:anyType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -173,6 +173,31 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewReview">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WhoReviewsBusinessName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WhereReviewsBusinessName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Mileage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Colour" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WhoReviewEmployee" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Brakes" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Damper" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Exhaust" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Convergence" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="light" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Vin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fuel" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewReviewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NewReviewResult" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
