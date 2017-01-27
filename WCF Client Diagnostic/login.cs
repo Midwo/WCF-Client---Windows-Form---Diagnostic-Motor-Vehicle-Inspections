@@ -59,6 +59,7 @@ namespace WCF_Client_Diagnostic
                         DataSet dsresponse = client.Business_employe(crypt.encrypt(textBox2.Text));
                         GlobalInformation.Name_Business = dsresponse.Tables[0].Rows[0][0].ToString();
                         GlobalInformation.Adress_Business = dsresponse.Tables[0].Rows[0][1].ToString();
+                        GlobalInformation.Login = textBox2.Text;
                         Menu m = new Menu();
                         m.Show();
                         this.Hide();

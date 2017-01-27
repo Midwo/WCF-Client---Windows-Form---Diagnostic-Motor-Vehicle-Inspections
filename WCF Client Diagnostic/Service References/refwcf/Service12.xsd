@@ -44,17 +44,17 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="fueltypeget">
+  <xs:element name="Fueltypeget">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic" minOccurs="0" name="all" nillable="true" type="q3:Enums" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="fueltypegetResponse">
+  <xs:element name="FueltypegetResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="fueltypegetResult" nillable="true" type="xs:anyType" />
+        <xs:element minOccurs="0" name="FueltypegetResult" nillable="true" type="xs:anyType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -197,7 +197,7 @@
   <xs:element name="NewReviewResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="NewReviewResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NewReviewResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

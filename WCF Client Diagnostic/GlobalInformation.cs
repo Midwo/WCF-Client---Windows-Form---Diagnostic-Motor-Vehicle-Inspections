@@ -10,6 +10,7 @@ namespace WCF_Client_Diagnostic
     {
         public static string Name_Business;
         public static string Adress_Business;
+        public static string Login;
         public static string VIN;
         public static int Error;
     }

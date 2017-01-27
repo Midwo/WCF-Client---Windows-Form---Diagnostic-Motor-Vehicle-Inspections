@@ -9,17 +9,17 @@
   <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
   <xs:complexType name="Enums">
     <xs:sequence>
-      <xs:element minOccurs="0" name="all" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="fueltypeenum" type="tns:fueltypeenum" />
+      <xs:element minOccurs="0" name="All" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fueltypeenum" type="tns:Fueltypeenum" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Enums" nillable="true" type="tns:Enums" />
-  <xs:simpleType name="fueltypeenum">
+  <xs:simpleType name="Fueltypeenum">
     <xs:restriction base="xs:string">
       <xs:enumeration value="PB" />
       <xs:enumeration value="LPG" />
       <xs:enumeration value="Diesel" />
     </xs:restriction>
   </xs:simpleType>
-  <xs:element name="fueltypeenum" nillable="true" type="tns:fueltypeenum" />
+  <xs:element name="Fueltypeenum" nillable="true" type="tns:Fueltypeenum" />
 </xs:schema>
