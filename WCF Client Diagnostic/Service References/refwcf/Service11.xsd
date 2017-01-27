@@ -22,4 +22,23 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="Fueltypeenum" nillable="true" type="tns:Fueltypeenum" />
+  <xs:complexType name="Review">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Brakes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Colour" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Convergence" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Damper" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateReviews" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Exhaust" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fuel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Light" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mileage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhereReviews" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhoReviewEnployee" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhoReviews" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Review" nillable="true" type="tns:Review" />
 </xs:schema>

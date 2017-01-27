@@ -149,6 +149,259 @@ namespace WCF_Client_Diagnostic.refwcf {
         Diesel = 2,
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Review", Namespace="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic")]
+    [System.SerializableAttribute()]
+    public partial class Review : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BrakesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ColourField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ConvergenceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DamperField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateReviewsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ExhaustField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FuelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LightField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MileageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string VinField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WhereReviewsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WhoReviewEnployeeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WhoReviewsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Brakes {
+            get {
+                return this.BrakesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BrakesField, value) != true)) {
+                    this.BrakesField = value;
+                    this.RaisePropertyChanged("Brakes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Colour {
+            get {
+                return this.ColourField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ColourField, value) != true)) {
+                    this.ColourField = value;
+                    this.RaisePropertyChanged("Colour");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Convergence {
+            get {
+                return this.ConvergenceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ConvergenceField, value) != true)) {
+                    this.ConvergenceField = value;
+                    this.RaisePropertyChanged("Convergence");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Damper {
+            get {
+                return this.DamperField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DamperField, value) != true)) {
+                    this.DamperField = value;
+                    this.RaisePropertyChanged("Damper");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DateReviews {
+            get {
+                return this.DateReviewsField;
+            }
+            set {
+                if ((this.DateReviewsField.Equals(value) != true)) {
+                    this.DateReviewsField = value;
+                    this.RaisePropertyChanged("DateReviews");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Exhaust {
+            get {
+                return this.ExhaustField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExhaustField, value) != true)) {
+                    this.ExhaustField = value;
+                    this.RaisePropertyChanged("Exhaust");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Fuel {
+            get {
+                return this.FuelField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FuelField, value) != true)) {
+                    this.FuelField = value;
+                    this.RaisePropertyChanged("Fuel");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdField, value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Light {
+            get {
+                return this.LightField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LightField, value) != true)) {
+                    this.LightField = value;
+                    this.RaisePropertyChanged("Light");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Mileage {
+            get {
+                return this.MileageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MileageField, value) != true)) {
+                    this.MileageField = value;
+                    this.RaisePropertyChanged("Mileage");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Vin {
+            get {
+                return this.VinField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VinField, value) != true)) {
+                    this.VinField = value;
+                    this.RaisePropertyChanged("Vin");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string WhereReviews {
+            get {
+                return this.WhereReviewsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WhereReviewsField, value) != true)) {
+                    this.WhereReviewsField = value;
+                    this.RaisePropertyChanged("WhereReviews");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string WhoReviewEnployee {
+            get {
+                return this.WhoReviewEnployeeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WhoReviewEnployeeField, value) != true)) {
+                    this.WhoReviewEnployeeField = value;
+                    this.RaisePropertyChanged("WhoReviewEnployee");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string WhoReviews {
+            get {
+                return this.WhoReviewsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WhoReviewsField, value) != true)) {
+                    this.WhoReviewsField = value;
+                    this.RaisePropertyChanged("WhoReviews");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="refwcf.IService1")]
     public interface IService1 {
@@ -175,6 +428,7 @@ namespace WCF_Client_Diagnostic.refwcf {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WCF_Client_Diagnostic.refwcf.CompositeType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WCF_Client_Diagnostic.refwcf.Enums))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WCF_Client_Diagnostic.refwcf.Fueltypeenum))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WCF_Client_Diagnostic.refwcf.Review))]
         object Fueltypeget(WCF_Client_Diagnostic.refwcf.Enums all);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Fueltypeget", ReplyAction="http://tempuri.org/IService1/FueltypegetResponse")]
@@ -221,6 +475,12 @@ namespace WCF_Client_Diagnostic.refwcf {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ShowEditReview", ReplyAction="http://tempuri.org/IService1/ShowEditReviewResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> ShowEditReviewAsync(string VIN, string BusinessName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SaveEditReview", ReplyAction="http://tempuri.org/IService1/SaveEditReviewResponse")]
+        string SaveEditReview(WCF_Client_Diagnostic.refwcf.Review Save);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SaveEditReview", ReplyAction="http://tempuri.org/IService1/SaveEditReviewResponse")]
+        System.Threading.Tasks.Task<string> SaveEditReviewAsync(WCF_Client_Diagnostic.refwcf.Review Save);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -336,6 +596,14 @@ namespace WCF_Client_Diagnostic.refwcf {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> ShowEditReviewAsync(string VIN, string BusinessName) {
             return base.Channel.ShowEditReviewAsync(VIN, BusinessName);
+        }
+        
+        public string SaveEditReview(WCF_Client_Diagnostic.refwcf.Review Save) {
+            return base.Channel.SaveEditReview(Save);
+        }
+        
+        public System.Threading.Tasks.Task<string> SaveEditReviewAsync(WCF_Client_Diagnostic.refwcf.Review Save) {
+            return base.Channel.SaveEditReviewAsync(Save);
         }
     }
 }

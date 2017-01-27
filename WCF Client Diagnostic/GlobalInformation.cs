@@ -13,5 +13,6 @@ namespace WCF_Client_Diagnostic
         public static string Login;
         public static string VIN;
         public static int Error;
+        public static string ID;
     }
 }

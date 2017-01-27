@@ -126,7 +126,15 @@ namespace WCF_Client_Diagnostic
             {
                 using (EditCarReview m = new EditCarReview())
                 {
-                    m.ShowDialog(this);
+                    if (GlobalInformation.Error == 1)
+                    {
+                        MessageBox.Show("You can't edit last review", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+
+                        m.ShowDialog(this);
+                    }
                 }
             }
             else

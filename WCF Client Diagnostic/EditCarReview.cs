@@ -30,7 +30,7 @@ namespace WCF_Client_Diagnostic
             }
             else
             {
-                var ID = response.Tables[0].Rows[0][0];
+                GlobalInformation.ID = response.Tables[0].Rows[0][0].ToString();
                 textBox2.Text = response.Tables[0].Rows[0][4].ToString();
                 textBox3.Text = response.Tables[0].Rows[0][5].ToString();
                 comboBox38.Text = response.Tables[0].Rows[0][8].ToString();
@@ -40,6 +40,7 @@ namespace WCF_Client_Diagnostic
                 comboBox36.Text = response.Tables[0].Rows[0][12].ToString();
                 textBox1.Text = response.Tables[0].Rows[0][13].ToString();
                 comboBox1.Text = response.Tables[0].Rows[0][6].ToString();
+                GlobalInformation.Error = 0;
             }
         }
 
@@ -52,8 +53,28 @@ namespace WCF_Client_Diagnostic
             comboBox40.Enabled = true;
             comboBox37.Enabled = true;
             comboBox36.Enabled = true;
-            textBox1.Enabled = true;
-            comboBox1.Enabled = true; 
+          
+            comboBox1.Enabled = true;
+
+          
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            refwcf.Review wcfdata = new refwcf.Review();
+            wcfdata.Id = GlobalInformation.ID;
+            wcfdata.Mileage = textBox2.Text;
+            wcfdata.Colour = textBox3.Text;
+            wcfdata.Fuel = comboBox1.Text;
+            wcfdata.Brakes = comboBox38.Text;
+            wcfdata.Damper = comboBox39.Text;
+            wcfdata.Exhaust = comboBox40.Text;
+            wcfdata.Convergence = comboBox37.Text;
+            wcfdata.Light = comboBox36.Text;
+
+            WCF_Client_Diagnostic.refwcf.Service1Client wcfsend = new refwcf.Service1Client();
+            MessageBox.Show("" + wcfsend.SaveEditReview(wcfdata) + "", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }
