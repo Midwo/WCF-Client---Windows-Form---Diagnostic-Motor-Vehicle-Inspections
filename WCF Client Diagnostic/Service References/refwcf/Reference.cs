@@ -215,6 +215,12 @@ namespace WCF_Client_Diagnostic.refwcf {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/NewReview", ReplyAction="http://tempuri.org/IService1/NewReviewResponse")]
         System.Threading.Tasks.Task<bool> NewReviewAsync(string WhoReviewsBusinessName, string WhereReviewsBusinessName, string Mileage, string Colour, string WhoReviewEmployee, string Brakes, string Damper, string Exhaust, string Convergence, string light, string Vin, string fuel);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ShowEditReview", ReplyAction="http://tempuri.org/IService1/ShowEditReviewResponse")]
+        System.Data.DataSet ShowEditReview(string VIN, string BusinessName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ShowEditReview", ReplyAction="http://tempuri.org/IService1/ShowEditReviewResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> ShowEditReviewAsync(string VIN, string BusinessName);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -322,6 +328,14 @@ namespace WCF_Client_Diagnostic.refwcf {
         
         public System.Threading.Tasks.Task<bool> NewReviewAsync(string WhoReviewsBusinessName, string WhereReviewsBusinessName, string Mileage, string Colour, string WhoReviewEmployee, string Brakes, string Damper, string Exhaust, string Convergence, string light, string Vin, string fuel) {
             return base.Channel.NewReviewAsync(WhoReviewsBusinessName, WhereReviewsBusinessName, Mileage, Colour, WhoReviewEmployee, Brakes, Damper, Exhaust, Convergence, light, Vin, fuel);
+        }
+        
+        public System.Data.DataSet ShowEditReview(string VIN, string BusinessName) {
+            return base.Channel.ShowEditReview(VIN, BusinessName);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> ShowEditReviewAsync(string VIN, string BusinessName) {
+            return base.Channel.ShowEditReviewAsync(VIN, BusinessName);
         }
     }
 }
