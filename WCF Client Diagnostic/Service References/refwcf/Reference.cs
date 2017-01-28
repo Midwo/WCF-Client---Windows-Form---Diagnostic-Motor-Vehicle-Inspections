@@ -15,67 +15,6 @@ namespace WCF_Client_Diagnostic.refwcf {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic")]
-    [System.SerializableAttribute()]
-    public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool BoolValueField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StringValueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool BoolValue {
-            get {
-                return this.BoolValueField;
-            }
-            set {
-                if ((this.BoolValueField.Equals(value) != true)) {
-                    this.BoolValueField = value;
-                    this.RaisePropertyChanged("BoolValue");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StringValue {
-            get {
-                return this.StringValueField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StringValueField, value) != true)) {
-                    this.StringValueField = value;
-                    this.RaisePropertyChanged("StringValue");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Enums", Namespace="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic")]
     [System.SerializableAttribute()]
     public partial class Enums : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -402,21 +341,182 @@ namespace WCF_Client_Diagnostic.refwcf {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Repair", Namespace="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic")]
+    [System.SerializableAttribute()]
+    public partial class Repair : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CostField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MileageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RepairDescritionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ReplacedPartsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string VINField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WhereRepairbusinessField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WhoRepairEmployeeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WhoRepairbusinessField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Cost {
+            get {
+                return this.CostField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CostField, value) != true)) {
+                    this.CostField = value;
+                    this.RaisePropertyChanged("Cost");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Mileage {
+            get {
+                return this.MileageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MileageField, value) != true)) {
+                    this.MileageField = value;
+                    this.RaisePropertyChanged("Mileage");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RepairDescrition {
+            get {
+                return this.RepairDescritionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RepairDescritionField, value) != true)) {
+                    this.RepairDescritionField = value;
+                    this.RaisePropertyChanged("RepairDescrition");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ReplacedParts {
+            get {
+                return this.ReplacedPartsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ReplacedPartsField, value) != true)) {
+                    this.ReplacedPartsField = value;
+                    this.RaisePropertyChanged("ReplacedParts");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string VIN {
+            get {
+                return this.VINField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VINField, value) != true)) {
+                    this.VINField = value;
+                    this.RaisePropertyChanged("VIN");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string WhereRepairbusiness {
+            get {
+                return this.WhereRepairbusinessField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WhereRepairbusinessField, value) != true)) {
+                    this.WhereRepairbusinessField = value;
+                    this.RaisePropertyChanged("WhereRepairbusiness");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string WhoRepairEmployee {
+            get {
+                return this.WhoRepairEmployeeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WhoRepairEmployeeField, value) != true)) {
+                    this.WhoRepairEmployeeField = value;
+                    this.RaisePropertyChanged("WhoRepairEmployee");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string WhoRepairbusiness {
+            get {
+                return this.WhoRepairbusinessField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WhoRepairbusinessField, value) != true)) {
+                    this.WhoRepairbusinessField = value;
+                    this.RaisePropertyChanged("WhoRepairbusiness");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="refwcf.IService1")]
     public interface IService1 {
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        string GetData(int value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        System.Threading.Tasks.Task<string> GetDataAsync(int value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        WCF_Client_Diagnostic.refwcf.CompositeType GetDataUsingDataContract(WCF_Client_Diagnostic.refwcf.CompositeType composite);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<WCF_Client_Diagnostic.refwcf.CompositeType> GetDataUsingDataContractAsync(WCF_Client_Diagnostic.refwcf.CompositeType composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Authentication", ReplyAction="http://tempuri.org/IService1/AuthenticationResponse")]
         bool Authentication(string loginNamecrypt, string passwordcrypt);
@@ -425,10 +525,10 @@ namespace WCF_Client_Diagnostic.refwcf {
         System.Threading.Tasks.Task<bool> AuthenticationAsync(string loginNamecrypt, string passwordcrypt);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Fueltypeget", ReplyAction="http://tempuri.org/IService1/FueltypegetResponse")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WCF_Client_Diagnostic.refwcf.CompositeType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WCF_Client_Diagnostic.refwcf.Enums))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WCF_Client_Diagnostic.refwcf.Fueltypeenum))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WCF_Client_Diagnostic.refwcf.Review))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WCF_Client_Diagnostic.refwcf.Repair))]
         object Fueltypeget(WCF_Client_Diagnostic.refwcf.Enums all);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Fueltypeget", ReplyAction="http://tempuri.org/IService1/FueltypegetResponse")]
@@ -481,6 +581,24 @@ namespace WCF_Client_Diagnostic.refwcf {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SaveEditReview", ReplyAction="http://tempuri.org/IService1/SaveEditReviewResponse")]
         System.Threading.Tasks.Task<string> SaveEditReviewAsync(WCF_Client_Diagnostic.refwcf.Review Save);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/NewRepair", ReplyAction="http://tempuri.org/IService1/NewRepairResponse")]
+        bool NewRepair(WCF_Client_Diagnostic.refwcf.Repair composite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/NewRepair", ReplyAction="http://tempuri.org/IService1/NewRepairResponse")]
+        System.Threading.Tasks.Task<bool> NewRepairAsync(WCF_Client_Diagnostic.refwcf.Repair composite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EditRepair", ReplyAction="http://tempuri.org/IService1/EditRepairResponse")]
+        bool EditRepair(WCF_Client_Diagnostic.refwcf.Repair composite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EditRepair", ReplyAction="http://tempuri.org/IService1/EditRepairResponse")]
+        System.Threading.Tasks.Task<bool> EditRepairAsync(WCF_Client_Diagnostic.refwcf.Repair composite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ShowEditRepair", ReplyAction="http://tempuri.org/IService1/ShowEditRepairResponse")]
+        System.Data.DataSet ShowEditRepair(string VIN, string BusinessName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ShowEditRepair", ReplyAction="http://tempuri.org/IService1/ShowEditRepairResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> ShowEditRepairAsync(string VIN, string BusinessName);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -508,22 +626,6 @@ namespace WCF_Client_Diagnostic.refwcf {
         
         public Service1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        public string GetData(int value) {
-            return base.Channel.GetData(value);
-        }
-        
-        public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
-            return base.Channel.GetDataAsync(value);
-        }
-        
-        public WCF_Client_Diagnostic.refwcf.CompositeType GetDataUsingDataContract(WCF_Client_Diagnostic.refwcf.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContract(composite);
-        }
-        
-        public System.Threading.Tasks.Task<WCF_Client_Diagnostic.refwcf.CompositeType> GetDataUsingDataContractAsync(WCF_Client_Diagnostic.refwcf.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContractAsync(composite);
         }
         
         public bool Authentication(string loginNamecrypt, string passwordcrypt) {
@@ -604,6 +706,30 @@ namespace WCF_Client_Diagnostic.refwcf {
         
         public System.Threading.Tasks.Task<string> SaveEditReviewAsync(WCF_Client_Diagnostic.refwcf.Review Save) {
             return base.Channel.SaveEditReviewAsync(Save);
+        }
+        
+        public bool NewRepair(WCF_Client_Diagnostic.refwcf.Repair composite) {
+            return base.Channel.NewRepair(composite);
+        }
+        
+        public System.Threading.Tasks.Task<bool> NewRepairAsync(WCF_Client_Diagnostic.refwcf.Repair composite) {
+            return base.Channel.NewRepairAsync(composite);
+        }
+        
+        public bool EditRepair(WCF_Client_Diagnostic.refwcf.Repair composite) {
+            return base.Channel.EditRepair(composite);
+        }
+        
+        public System.Threading.Tasks.Task<bool> EditRepairAsync(WCF_Client_Diagnostic.refwcf.Repair composite) {
+            return base.Channel.EditRepairAsync(composite);
+        }
+        
+        public System.Data.DataSet ShowEditRepair(string VIN, string BusinessName) {
+            return base.Channel.ShowEditRepair(VIN, BusinessName);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> ShowEditRepairAsync(string VIN, string BusinessName) {
+            return base.Channel.ShowEditRepairAsync(VIN, BusinessName);
         }
     }
 }

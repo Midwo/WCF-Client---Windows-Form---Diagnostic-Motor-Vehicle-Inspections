@@ -8,18 +8,6 @@
       <xsd:import schemaLocation="http://localhost:56054/Service1.svc?xsd=xsd3" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IService1_GetData_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetData" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetData_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
-  </wsdl:message>
   <wsdl:message name="IService1_Authentication_InputMessage">
     <wsdl:part name="parameters" element="tns:Authentication" />
   </wsdl:message>
@@ -80,15 +68,25 @@
   <wsdl:message name="IService1_SaveEditReview_OutputMessage">
     <wsdl:part name="parameters" element="tns:SaveEditReviewResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_NewRepair_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewRepair" />
+  </wsdl:message>
+  <wsdl:message name="IService1_NewRepair_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewRepairResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EditRepair_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditRepair" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EditRepair_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditRepairResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowEditRepair_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowEditRepair" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowEditRepair_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowEditRepairResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
-    <wsdl:operation name="GetData">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="Authentication">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/Authentication" message="tns:IService1_Authentication_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/AuthenticationResponse" message="tns:IService1_Authentication_OutputMessage" />
@@ -129,27 +127,21 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/SaveEditReview" message="tns:IService1_SaveEditReview_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/SaveEditReviewResponse" message="tns:IService1_SaveEditReview_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="NewRepair">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/NewRepair" message="tns:IService1_NewRepair_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/NewRepairResponse" message="tns:IService1_NewRepair_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditRepair">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EditRepair" message="tns:IService1_EditRepair_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EditRepairResponse" message="tns:IService1_EditRepair_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowEditRepair">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowEditRepair" message="tns:IService1_ShowEditRepair_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowEditRepairResponse" message="tns:IService1_ShowEditRepair_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetData">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="Authentication">
       <soap:operation soapAction="http://tempuri.org/IService1/Authentication" style="document" />
       <wsdl:input>
@@ -233,6 +225,33 @@
     </wsdl:operation>
     <wsdl:operation name="SaveEditReview">
       <soap:operation soapAction="http://tempuri.org/IService1/SaveEditReview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewRepair">
+      <soap:operation soapAction="http://tempuri.org/IService1/NewRepair" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditRepair">
+      <soap:operation soapAction="http://tempuri.org/IService1/EditRepair" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowEditRepair">
+      <soap:operation soapAction="http://tempuri.org/IService1/ShowEditRepair" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

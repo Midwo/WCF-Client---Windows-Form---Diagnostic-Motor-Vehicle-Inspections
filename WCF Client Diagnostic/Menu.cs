@@ -174,7 +174,16 @@ namespace WCF_Client_Diagnostic
             {
                 using (EditCarRepair m = new EditCarRepair())
                 {
-                    m.ShowDialog();
+                    if(GlobalInformation.Error == 1)
+                    {
+                        MessageBox.Show("You can't edit last repair", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        m.ShowDialog();
+                    }
+                    
                 }
             }
             else

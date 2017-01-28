@@ -192,9 +192,6 @@
     <None Include="Service References\refwcf\Service13.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\refwcf\WCF_Client_Diagnostic.refwcf.CompositeType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
