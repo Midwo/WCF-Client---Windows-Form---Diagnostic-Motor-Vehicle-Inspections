@@ -48,4 +48,44 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Repair" nillable="true" type="tns:Repair" />
+  <xs:complexType name="Order">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cost" type="xs:float" />
+      <xs:element minOccurs="0" name="DateSend" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Items" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Send" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhenDateNecessary" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="WhereOrder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhoOrderBusiness" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhoOrderEmployee" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Order" nillable="true" type="tns:Order" />
+  <xs:complexType name="Bill">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cost" type="xs:float" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Employee" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InformationClient" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceivedCash" type="xs:float" />
+      <xs:element minOccurs="0" name="Rest" type="xs:float" />
+      <xs:element minOccurs="0" name="TypePayment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="What" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhereBusiness" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhoBill" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhoBusiness" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Bill" nillable="true" type="tns:Bill" />
+  <xs:complexType name="ContractIServiceSendEmailOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateNecessary" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Who" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContractIServiceSendEmailOrder" nillable="true" type="tns:ContractIServiceSendEmailOrder" />
 </xs:schema>

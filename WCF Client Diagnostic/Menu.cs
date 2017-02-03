@@ -270,5 +270,27 @@ namespace WCF_Client_Diagnostic
         {
             Application.Exit();
         }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+            pictureBox10_Click(e, null);
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            InvoiceBus m = new InvoiceBus();
+            m.ShowDialog();
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            pictureBox11_Click(e, null);
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            InvoicePers m = new InvoicePers();
+            m.ShowDialog();
+        }
     }
 }

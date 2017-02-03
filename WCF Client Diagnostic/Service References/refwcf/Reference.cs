@@ -514,6 +514,493 @@ namespace WCF_Client_Diagnostic.refwcf {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Order", Namespace="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic")]
+    [System.SerializableAttribute()]
+    public partial class Order : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float CostField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateSendField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ItemsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SendField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime WhenDateNecessaryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WhereOrderField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WhoOrderBusinessField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WhoOrderEmployeeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float Cost {
+            get {
+                return this.CostField;
+            }
+            set {
+                if ((this.CostField.Equals(value) != true)) {
+                    this.CostField = value;
+                    this.RaisePropertyChanged("Cost");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DateSend {
+            get {
+                return this.DateSendField;
+            }
+            set {
+                if ((this.DateSendField.Equals(value) != true)) {
+                    this.DateSendField = value;
+                    this.RaisePropertyChanged("DateSend");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Items {
+            get {
+                return this.ItemsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ItemsField, value) != true)) {
+                    this.ItemsField = value;
+                    this.RaisePropertyChanged("Items");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Send {
+            get {
+                return this.SendField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SendField, value) != true)) {
+                    this.SendField = value;
+                    this.RaisePropertyChanged("Send");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime WhenDateNecessary {
+            get {
+                return this.WhenDateNecessaryField;
+            }
+            set {
+                if ((this.WhenDateNecessaryField.Equals(value) != true)) {
+                    this.WhenDateNecessaryField = value;
+                    this.RaisePropertyChanged("WhenDateNecessary");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string WhereOrder {
+            get {
+                return this.WhereOrderField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WhereOrderField, value) != true)) {
+                    this.WhereOrderField = value;
+                    this.RaisePropertyChanged("WhereOrder");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string WhoOrderBusiness {
+            get {
+                return this.WhoOrderBusinessField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WhoOrderBusinessField, value) != true)) {
+                    this.WhoOrderBusinessField = value;
+                    this.RaisePropertyChanged("WhoOrderBusiness");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string WhoOrderEmployee {
+            get {
+                return this.WhoOrderEmployeeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WhoOrderEmployeeField, value) != true)) {
+                    this.WhoOrderEmployeeField = value;
+                    this.RaisePropertyChanged("WhoOrderEmployee");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Bill", Namespace="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic")]
+    [System.SerializableAttribute()]
+    public partial class Bill : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float CostField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmployeeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string InformationClientField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float ReceivedCashField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float RestField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TypePaymentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WhatField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WhereBusinessField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WhoBillField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WhoBusinessField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float Cost {
+            get {
+                return this.CostField;
+            }
+            set {
+                if ((this.CostField.Equals(value) != true)) {
+                    this.CostField = value;
+                    this.RaisePropertyChanged("Cost");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Date {
+            get {
+                return this.DateField;
+            }
+            set {
+                if ((this.DateField.Equals(value) != true)) {
+                    this.DateField = value;
+                    this.RaisePropertyChanged("Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Employee {
+            get {
+                return this.EmployeeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmployeeField, value) != true)) {
+                    this.EmployeeField = value;
+                    this.RaisePropertyChanged("Employee");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string InformationClient {
+            get {
+                return this.InformationClientField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InformationClientField, value) != true)) {
+                    this.InformationClientField = value;
+                    this.RaisePropertyChanged("InformationClient");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float ReceivedCash {
+            get {
+                return this.ReceivedCashField;
+            }
+            set {
+                if ((this.ReceivedCashField.Equals(value) != true)) {
+                    this.ReceivedCashField = value;
+                    this.RaisePropertyChanged("ReceivedCash");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float Rest {
+            get {
+                return this.RestField;
+            }
+            set {
+                if ((this.RestField.Equals(value) != true)) {
+                    this.RestField = value;
+                    this.RaisePropertyChanged("Rest");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TypePayment {
+            get {
+                return this.TypePaymentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TypePaymentField, value) != true)) {
+                    this.TypePaymentField = value;
+                    this.RaisePropertyChanged("TypePayment");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string What {
+            get {
+                return this.WhatField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WhatField, value) != true)) {
+                    this.WhatField = value;
+                    this.RaisePropertyChanged("What");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string WhereBusiness {
+            get {
+                return this.WhereBusinessField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WhereBusinessField, value) != true)) {
+                    this.WhereBusinessField = value;
+                    this.RaisePropertyChanged("WhereBusiness");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string WhoBill {
+            get {
+                return this.WhoBillField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WhoBillField, value) != true)) {
+                    this.WhoBillField = value;
+                    this.RaisePropertyChanged("WhoBill");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string WhoBusiness {
+            get {
+                return this.WhoBusinessField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WhoBusinessField, value) != true)) {
+                    this.WhoBusinessField = value;
+                    this.RaisePropertyChanged("WhoBusiness");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ContractIServiceSendEmailOrder", Namespace="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic")]
+    [System.SerializableAttribute()]
+    public partial class ContractIServiceSendEmailOrder : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BodyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateNecessaryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PriorityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WhoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Body {
+            get {
+                return this.BodyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BodyField, value) != true)) {
+                    this.BodyField = value;
+                    this.RaisePropertyChanged("Body");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DateNecessary {
+            get {
+                return this.DateNecessaryField;
+            }
+            set {
+                if ((this.DateNecessaryField.Equals(value) != true)) {
+                    this.DateNecessaryField = value;
+                    this.RaisePropertyChanged("DateNecessary");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Priority {
+            get {
+                return this.PriorityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PriorityField, value) != true)) {
+                    this.PriorityField = value;
+                    this.RaisePropertyChanged("Priority");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Who {
+            get {
+                return this.WhoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WhoField, value) != true)) {
+                    this.WhoField = value;
+                    this.RaisePropertyChanged("Who");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="refwcf.IService1")]
     public interface IService1 {
@@ -529,6 +1016,9 @@ namespace WCF_Client_Diagnostic.refwcf {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WCF_Client_Diagnostic.refwcf.Fueltypeenum))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WCF_Client_Diagnostic.refwcf.Review))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WCF_Client_Diagnostic.refwcf.Repair))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WCF_Client_Diagnostic.refwcf.Order))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WCF_Client_Diagnostic.refwcf.Bill))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WCF_Client_Diagnostic.refwcf.ContractIServiceSendEmailOrder))]
         object Fueltypeget(WCF_Client_Diagnostic.refwcf.Enums all);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Fueltypeget", ReplyAction="http://tempuri.org/IService1/FueltypegetResponse")]
@@ -599,6 +1089,30 @@ namespace WCF_Client_Diagnostic.refwcf {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ShowEditRepair", ReplyAction="http://tempuri.org/IService1/ShowEditRepairResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> ShowEditRepairAsync(string VIN, string BusinessName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/NewOrder", ReplyAction="http://tempuri.org/IService1/NewOrderResponse")]
+        bool NewOrder(WCF_Client_Diagnostic.refwcf.Order composite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/NewOrder", ReplyAction="http://tempuri.org/IService1/NewOrderResponse")]
+        System.Threading.Tasks.Task<bool> NewOrderAsync(WCF_Client_Diagnostic.refwcf.Order composite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ClientOptionStatus", ReplyAction="http://tempuri.org/IService1/ClientOptionStatusResponse")]
+        System.Data.DataSet ClientOptionStatus();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ClientOptionStatus", ReplyAction="http://tempuri.org/IService1/ClientOptionStatusResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> ClientOptionStatusAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/BillSave", ReplyAction="http://tempuri.org/IService1/BillSaveResponse")]
+        int BillSave(WCF_Client_Diagnostic.refwcf.Bill component);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/BillSave", ReplyAction="http://tempuri.org/IService1/BillSaveResponse")]
+        System.Threading.Tasks.Task<int> BillSaveAsync(WCF_Client_Diagnostic.refwcf.Bill component);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SendOrderEmial", ReplyAction="http://tempuri.org/IService1/SendOrderEmialResponse")]
+        bool SendOrderEmial(WCF_Client_Diagnostic.refwcf.ContractIServiceSendEmailOrder option);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SendOrderEmial", ReplyAction="http://tempuri.org/IService1/SendOrderEmialResponse")]
+        System.Threading.Tasks.Task<bool> SendOrderEmialAsync(WCF_Client_Diagnostic.refwcf.ContractIServiceSendEmailOrder option);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -730,6 +1244,38 @@ namespace WCF_Client_Diagnostic.refwcf {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> ShowEditRepairAsync(string VIN, string BusinessName) {
             return base.Channel.ShowEditRepairAsync(VIN, BusinessName);
+        }
+        
+        public bool NewOrder(WCF_Client_Diagnostic.refwcf.Order composite) {
+            return base.Channel.NewOrder(composite);
+        }
+        
+        public System.Threading.Tasks.Task<bool> NewOrderAsync(WCF_Client_Diagnostic.refwcf.Order composite) {
+            return base.Channel.NewOrderAsync(composite);
+        }
+        
+        public System.Data.DataSet ClientOptionStatus() {
+            return base.Channel.ClientOptionStatus();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> ClientOptionStatusAsync() {
+            return base.Channel.ClientOptionStatusAsync();
+        }
+        
+        public int BillSave(WCF_Client_Diagnostic.refwcf.Bill component) {
+            return base.Channel.BillSave(component);
+        }
+        
+        public System.Threading.Tasks.Task<int> BillSaveAsync(WCF_Client_Diagnostic.refwcf.Bill component) {
+            return base.Channel.BillSaveAsync(component);
+        }
+        
+        public bool SendOrderEmial(WCF_Client_Diagnostic.refwcf.ContractIServiceSendEmailOrder option) {
+            return base.Channel.SendOrderEmial(option);
+        }
+        
+        public System.Threading.Tasks.Task<bool> SendOrderEmialAsync(WCF_Client_Diagnostic.refwcf.ContractIServiceSendEmailOrder option) {
+            return base.Channel.SendOrderEmialAsync(option);
         }
     }
 }

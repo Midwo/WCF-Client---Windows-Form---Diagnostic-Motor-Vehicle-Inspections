@@ -91,6 +91,18 @@
       <DependentUpon>EditCarReview.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalInformation.cs" />
+    <Compile Include="InvoiceBus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceBus.Designer.cs">
+      <DependentUpon>InvoiceBus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoicePers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoicePers.Designer.cs">
+      <DependentUpon>InvoicePers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +160,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditCarReview.resx">
       <DependentUpon>EditCarReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceBus.resx">
+      <DependentUpon>InvoiceBus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoicePers.resx">
+      <DependentUpon>InvoicePers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

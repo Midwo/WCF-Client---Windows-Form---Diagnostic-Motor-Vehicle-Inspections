@@ -86,6 +86,30 @@
   <wsdl:message name="IService1_ShowEditRepair_OutputMessage">
     <wsdl:part name="parameters" element="tns:ShowEditRepairResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_NewOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewOrder" />
+  </wsdl:message>
+  <wsdl:message name="IService1_NewOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ClientOptionStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClientOptionStatus" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ClientOptionStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClientOptionStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BillSave_InputMessage">
+    <wsdl:part name="parameters" element="tns:BillSave" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BillSave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BillSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendOrderEmial_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendOrderEmial" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendOrderEmial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendOrderEmialResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="Authentication">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/Authentication" message="tns:IService1_Authentication_InputMessage" />
@@ -138,6 +162,22 @@
     <wsdl:operation name="ShowEditRepair">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowEditRepair" message="tns:IService1_ShowEditRepair_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowEditRepairResponse" message="tns:IService1_ShowEditRepair_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/NewOrder" message="tns:IService1_NewOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/NewOrderResponse" message="tns:IService1_NewOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClientOptionStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ClientOptionStatus" message="tns:IService1_ClientOptionStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ClientOptionStatusResponse" message="tns:IService1_ClientOptionStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BillSave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/BillSave" message="tns:IService1_BillSave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/BillSaveResponse" message="tns:IService1_BillSave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendOrderEmial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SendOrderEmial" message="tns:IService1_SendOrderEmial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SendOrderEmialResponse" message="tns:IService1_SendOrderEmial_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -252,6 +292,42 @@
     </wsdl:operation>
     <wsdl:operation name="ShowEditRepair">
       <soap:operation soapAction="http://tempuri.org/IService1/ShowEditRepair" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewOrder">
+      <soap:operation soapAction="http://tempuri.org/IService1/NewOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClientOptionStatus">
+      <soap:operation soapAction="http://tempuri.org/IService1/ClientOptionStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BillSave">
+      <soap:operation soapAction="http://tempuri.org/IService1/BillSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendOrderEmial">
+      <soap:operation soapAction="http://tempuri.org/IService1/SendOrderEmial" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
