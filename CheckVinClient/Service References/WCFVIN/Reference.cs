@@ -1208,11 +1208,11 @@ namespace CheckVinClient.WCFVIN {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SendOrderEmial", ReplyAction="http://tempuri.org/IService1/SendOrderEmialResponse")]
         System.Threading.Tasks.Task<bool> SendOrderEmialAsync(CheckVinClient.WCFVIN.ContractIServiceSendEmailOrder option);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CheckVinClient_Account", ReplyAction="http://tempuri.org/IService1/CheckVinClient_AccountResponse")]
-        string CheckVinClient_Account(CheckVinClient.WCFVIN.CheckVinClient_Account component);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CheckVinClient_NewAccount", ReplyAction="http://tempuri.org/IService1/CheckVinClient_NewAccountResponse")]
+        string CheckVinClient_NewAccount(CheckVinClient.WCFVIN.CheckVinClient_Account component);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CheckVinClient_Account", ReplyAction="http://tempuri.org/IService1/CheckVinClient_AccountResponse")]
-        System.Threading.Tasks.Task<string> CheckVinClient_AccountAsync(CheckVinClient.WCFVIN.CheckVinClient_Account component);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CheckVinClient_NewAccount", ReplyAction="http://tempuri.org/IService1/CheckVinClient_NewAccountResponse")]
+        System.Threading.Tasks.Task<string> CheckVinClient_NewAccountAsync(CheckVinClient.WCFVIN.CheckVinClient_Account component);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1378,12 +1378,12 @@ namespace CheckVinClient.WCFVIN {
             return base.Channel.SendOrderEmialAsync(option);
         }
         
-        public string CheckVinClient_Account(CheckVinClient.WCFVIN.CheckVinClient_Account component) {
-            return base.Channel.CheckVinClient_Account(component);
+        public string CheckVinClient_NewAccount(CheckVinClient.WCFVIN.CheckVinClient_Account component) {
+            return base.Channel.CheckVinClient_NewAccount(component);
         }
         
-        public System.Threading.Tasks.Task<string> CheckVinClient_AccountAsync(CheckVinClient.WCFVIN.CheckVinClient_Account component) {
-            return base.Channel.CheckVinClient_AccountAsync(component);
+        public System.Threading.Tasks.Task<string> CheckVinClient_NewAccountAsync(CheckVinClient.WCFVIN.CheckVinClient_Account component) {
+            return base.Channel.CheckVinClient_NewAccountAsync(component);
         }
     }
 }

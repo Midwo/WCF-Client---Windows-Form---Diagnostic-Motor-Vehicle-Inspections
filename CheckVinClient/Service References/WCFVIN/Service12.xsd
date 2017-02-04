@@ -335,17 +335,17 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="CheckVinClient_Account">
+  <xs:element name="CheckVinClient_NewAccount">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic" minOccurs="0" name="component" nillable="true" type="q8:CheckVinClient_Account" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="CheckVinClient_AccountResponse">
+  <xs:element name="CheckVinClient_NewAccountResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="CheckVinClient_AccountResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CheckVinClient_NewAccountResult" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

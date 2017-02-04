@@ -23,18 +23,20 @@ namespace CheckVinClient
             if (isEmail(textBoxEmail.Text) == false)
             {
                 MessageBox.Show("Enter a valid email", "Error - email", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                textBoxEmail.Select();
                 return;
             }
 
             if (textBoxName.Text.Trim() == string.Empty)
             {
-                MessageBox.Show("Enter a your name", "Error - name", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               MessageBox.Show("Enter a your name", "Error - name", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxName.Select();
                 return;
             }
             if (textBoxSurname.Text.Trim() == string.Empty)
             {
                 MessageBox.Show("Enter a your surname", "Error - surname", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxSurname.Select();
                 return;
             }
 
@@ -43,6 +45,7 @@ namespace CheckVinClient
             if (index > 0)
             {
                 MessageBox.Show("Enter a valid number", "Error - phone", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                maskedTextBoxPhone.Select();
                 return;
             }
 
@@ -53,7 +56,15 @@ namespace CheckVinClient
             component.Phone = SendText.encrypt(maskedTextBoxPhone.Text);
             component.Surname = SendText.encrypt(textBoxSurname.Text);
 
-         
+            WCFVIN.Service1Client send = new WCFVIN.Service1Client();
+            string x = send.CheckVinClient_NewAccount(component);
+            MessageBox.Show(x, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            textBoxEmail.Clear();
+            textBoxName.Clear();
+            textBoxSurname.Clear();
+            maskedTextBoxPhone.Clear();
+
         }
 
         public static bool isEmail(string emailAddress)
