@@ -88,4 +88,13 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ContractIServiceSendEmailOrder" nillable="true" type="tns:ContractIServiceSendEmailOrder" />
+  <xs:complexType name="CheckVinClient_Account">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdressEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Surname" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CheckVinClient_Account" nillable="true" type="tns:CheckVinClient_Account" />
 </xs:schema>

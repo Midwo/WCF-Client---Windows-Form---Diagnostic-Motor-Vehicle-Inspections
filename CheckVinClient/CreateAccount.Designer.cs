@@ -38,10 +38,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxSurname = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxPhone = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -84,14 +84,14 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.18004F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.81996F));
-            this.tableLayoutPanel1.Controls.Add(this.maskedTextBox1, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.maskedTextBoxPhone, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.labelEmail, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.textBoxEmail, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxName, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxSurname, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 25);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -156,21 +156,21 @@
             this.textBoxEmail.Size = new System.Drawing.Size(357, 26);
             this.textBoxEmail.TabIndex = 6;
             // 
-            // textBox2
+            // textBoxName
             // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(151, 42);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(357, 26);
-            this.textBox2.TabIndex = 7;
+            this.textBoxName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxName.Location = new System.Drawing.Point(151, 42);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(357, 26);
+            this.textBoxName.TabIndex = 7;
             // 
-            // textBox3
+            // textBoxSurname
             // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Location = new System.Drawing.Point(151, 78);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(357, 26);
-            this.textBox3.TabIndex = 8;
+            this.textBoxSurname.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxSurname.Location = new System.Drawing.Point(151, 78);
+            this.textBoxSurname.Name = "textBoxSurname";
+            this.textBoxSurname.Size = new System.Drawing.Size(357, 26);
+            this.textBoxSurname.TabIndex = 8;
             // 
             // button1
             // 
@@ -183,14 +183,14 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // maskedTextBox1
+            // maskedTextBoxPhone
             // 
-            this.maskedTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.maskedTextBox1.Location = new System.Drawing.Point(151, 114);
-            this.maskedTextBox1.Mask = "000-000-000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(357, 26);
-            this.maskedTextBox1.TabIndex = 2;
+            this.maskedTextBoxPhone.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.maskedTextBoxPhone.Location = new System.Drawing.Point(151, 114);
+            this.maskedTextBoxPhone.Mask = "+48-000-000-000";
+            this.maskedTextBoxPhone.Name = "maskedTextBoxPhone";
+            this.maskedTextBoxPhone.Size = new System.Drawing.Size(357, 26);
+            this.maskedTextBoxPhone.TabIndex = 2;
             // 
             // CreateAccount
             // 
@@ -226,8 +226,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxEmail;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxSurname;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxPhone;
     }
 }

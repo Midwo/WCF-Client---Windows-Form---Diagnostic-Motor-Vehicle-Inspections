@@ -54,6 +54,7 @@
     <Compile Include="CreateAccount.Designer.cs">
       <DependentUpon>CreateAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="EncryptDecrypt.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

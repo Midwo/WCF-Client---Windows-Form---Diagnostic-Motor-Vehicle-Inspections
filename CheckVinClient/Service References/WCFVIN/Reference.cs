@@ -1001,6 +1001,99 @@ namespace CheckVinClient.WCFVIN {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CheckVinClient_Account", Namespace="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic")]
+    [System.SerializableAttribute()]
+    public partial class CheckVinClient_Account : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AdressEmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PhoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SurnameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AdressEmail {
+            get {
+                return this.AdressEmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AdressEmailField, value) != true)) {
+                    this.AdressEmailField = value;
+                    this.RaisePropertyChanged("AdressEmail");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Phone {
+            get {
+                return this.PhoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
+                    this.PhoneField = value;
+                    this.RaisePropertyChanged("Phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Surname {
+            get {
+                return this.SurnameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SurnameField, value) != true)) {
+                    this.SurnameField = value;
+                    this.RaisePropertyChanged("Surname");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WCFVIN.IService1")]
     public interface IService1 {
@@ -1019,6 +1112,7 @@ namespace CheckVinClient.WCFVIN {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CheckVinClient.WCFVIN.Order))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CheckVinClient.WCFVIN.Bill))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CheckVinClient.WCFVIN.ContractIServiceSendEmailOrder))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CheckVinClient.WCFVIN.CheckVinClient_Account))]
         object Fueltypeget(CheckVinClient.WCFVIN.Enums all);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Fueltypeget", ReplyAction="http://tempuri.org/IService1/FueltypegetResponse")]
@@ -1113,6 +1207,12 @@ namespace CheckVinClient.WCFVIN {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SendOrderEmial", ReplyAction="http://tempuri.org/IService1/SendOrderEmialResponse")]
         System.Threading.Tasks.Task<bool> SendOrderEmialAsync(CheckVinClient.WCFVIN.ContractIServiceSendEmailOrder option);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CheckVinClient_Account", ReplyAction="http://tempuri.org/IService1/CheckVinClient_AccountResponse")]
+        string CheckVinClient_Account(CheckVinClient.WCFVIN.CheckVinClient_Account component);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CheckVinClient_Account", ReplyAction="http://tempuri.org/IService1/CheckVinClient_AccountResponse")]
+        System.Threading.Tasks.Task<string> CheckVinClient_AccountAsync(CheckVinClient.WCFVIN.CheckVinClient_Account component);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1276,6 +1376,14 @@ namespace CheckVinClient.WCFVIN {
         
         public System.Threading.Tasks.Task<bool> SendOrderEmialAsync(CheckVinClient.WCFVIN.ContractIServiceSendEmailOrder option) {
             return base.Channel.SendOrderEmialAsync(option);
+        }
+        
+        public string CheckVinClient_Account(CheckVinClient.WCFVIN.CheckVinClient_Account component) {
+            return base.Channel.CheckVinClient_Account(component);
+        }
+        
+        public System.Threading.Tasks.Task<string> CheckVinClient_AccountAsync(CheckVinClient.WCFVIN.CheckVinClient_Account component) {
+            return base.Channel.CheckVinClient_AccountAsync(component);
         }
     }
 }

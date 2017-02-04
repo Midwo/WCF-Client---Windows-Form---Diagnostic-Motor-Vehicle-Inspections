@@ -20,10 +20,40 @@ namespace CheckVinClient
 
         private void button1_Click(object sender, EventArgs e)
         {
-           bool x = isEmail(textBoxEmail.Text);
-            var y = maskedTextBox1.TextLength; // 11
-            MessageBox.Show(y.ToString());
-            
+            if (isEmail(textBoxEmail.Text) == false)
+            {
+                MessageBox.Show("Enter a valid email", "Error - email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+            }
+
+            if (textBoxName.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Enter a your name", "Error - name", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (textBoxSurname.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Enter a your surname", "Error - surname", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string z = maskedTextBoxPhone.Text;
+            int index = z.IndexOf(" ");
+            if (index > 0)
+            {
+                MessageBox.Show("Enter a valid number", "Error - phone", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+
+            WCFVIN.CheckVinClient_Account component = new WCFVIN.CheckVinClient_Account();
+            EncryptDecrypt SendText = new EncryptDecrypt();
+            component.AdressEmail = SendText.encrypt(textBoxEmail.Text);
+            component.Name = SendText.encrypt(textBoxName.Text);
+            component.Phone = SendText.encrypt(maskedTextBoxPhone.Text);
+            component.Surname = SendText.encrypt(textBoxSurname.Text);
+
+         
         }
 
         public static bool isEmail(string emailAddress)

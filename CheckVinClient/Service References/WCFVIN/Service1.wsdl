@@ -110,6 +110,12 @@
   <wsdl:message name="IService1_SendOrderEmial_OutputMessage">
     <wsdl:part name="parameters" element="tns:SendOrderEmialResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_CheckVinClient_Account_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckVinClient_Account" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CheckVinClient_Account_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckVinClient_AccountResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="Authentication">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/Authentication" message="tns:IService1_Authentication_InputMessage" />
@@ -178,6 +184,10 @@
     <wsdl:operation name="SendOrderEmial">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/SendOrderEmial" message="tns:IService1_SendOrderEmial_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/SendOrderEmialResponse" message="tns:IService1_SendOrderEmial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckVinClient_Account">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CheckVinClient_Account" message="tns:IService1_CheckVinClient_Account_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CheckVinClient_AccountResponse" message="tns:IService1_CheckVinClient_Account_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -328,6 +338,15 @@
     </wsdl:operation>
     <wsdl:operation name="SendOrderEmial">
       <soap:operation soapAction="http://tempuri.org/IService1/SendOrderEmial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckVinClient_Account">
+      <soap:operation soapAction="http://tempuri.org/IService1/CheckVinClient_Account" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
