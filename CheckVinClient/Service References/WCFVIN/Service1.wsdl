@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:56054/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:56054/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:56054/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic" />
+      <xsd:import schemaLocation="http://localhost:56054/Service1.svc?xsd=xsd3" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_Authentication_InputMessage">
+    <wsdl:part name="parameters" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Authentication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Fueltypeget_InputMessage">
+    <wsdl:part name="parameters" element="tns:Fueltypeget" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Fueltypeget_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FueltypegetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getstartwork_InputMessage">
+    <wsdl:part name="parameters" element="tns:getstartwork" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getstartwork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getstartworkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Business_employe_InputMessage">
+    <wsdl:part name="parameters" element="tns:Business_employe" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Business_employe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Business_employeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowReviewsTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowReviewsTable" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowReviewsTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowReviewsTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowRepairTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowRepairTable" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowRepairTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowRepairTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowOrderTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowOrderTable" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowOrderTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowOrderTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_NewReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewReview" />
+  </wsdl:message>
+  <wsdl:message name="IService1_NewReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowEditReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowEditReview" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowEditReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowEditReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SaveEditReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEditReview" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SaveEditReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEditReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_NewRepair_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewRepair" />
+  </wsdl:message>
+  <wsdl:message name="IService1_NewRepair_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewRepairResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EditRepair_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditRepair" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EditRepair_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditRepairResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowEditRepair_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowEditRepair" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowEditRepair_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowEditRepairResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_NewOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewOrder" />
+  </wsdl:message>
+  <wsdl:message name="IService1_NewOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ClientOptionStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClientOptionStatus" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ClientOptionStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClientOptionStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BillSave_InputMessage">
+    <wsdl:part name="parameters" element="tns:BillSave" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BillSave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BillSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendOrderEmial_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendOrderEmial" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendOrderEmial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendOrderEmialResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="Authentication">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Authentication" message="tns:IService1_Authentication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AuthenticationResponse" message="tns:IService1_Authentication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Fueltypeget">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Fueltypeget" message="tns:IService1_Fueltypeget_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/FueltypegetResponse" message="tns:IService1_Fueltypeget_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getstartwork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getstartwork" message="tns:IService1_getstartwork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getstartworkResponse" message="tns:IService1_getstartwork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Business_employe">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Business_employe" message="tns:IService1_Business_employe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Business_employeResponse" message="tns:IService1_Business_employe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowReviewsTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowReviewsTable" message="tns:IService1_ShowReviewsTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowReviewsTableResponse" message="tns:IService1_ShowReviewsTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowRepairTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowRepairTable" message="tns:IService1_ShowRepairTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowRepairTableResponse" message="tns:IService1_ShowRepairTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowOrderTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowOrderTable" message="tns:IService1_ShowOrderTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowOrderTableResponse" message="tns:IService1_ShowOrderTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewReview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/NewReview" message="tns:IService1_NewReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/NewReviewResponse" message="tns:IService1_NewReview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowEditReview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowEditReview" message="tns:IService1_ShowEditReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowEditReviewResponse" message="tns:IService1_ShowEditReview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEditReview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SaveEditReview" message="tns:IService1_SaveEditReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SaveEditReviewResponse" message="tns:IService1_SaveEditReview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewRepair">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/NewRepair" message="tns:IService1_NewRepair_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/NewRepairResponse" message="tns:IService1_NewRepair_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditRepair">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EditRepair" message="tns:IService1_EditRepair_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EditRepairResponse" message="tns:IService1_EditRepair_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowEditRepair">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowEditRepair" message="tns:IService1_ShowEditRepair_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowEditRepairResponse" message="tns:IService1_ShowEditRepair_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/NewOrder" message="tns:IService1_NewOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/NewOrderResponse" message="tns:IService1_NewOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClientOptionStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ClientOptionStatus" message="tns:IService1_ClientOptionStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ClientOptionStatusResponse" message="tns:IService1_ClientOptionStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BillSave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/BillSave" message="tns:IService1_BillSave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/BillSaveResponse" message="tns:IService1_BillSave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendOrderEmial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SendOrderEmial" message="tns:IService1_SendOrderEmial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SendOrderEmialResponse" message="tns:IService1_SendOrderEmial_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Authentication">
+      <soap:operation soapAction="http://tempuri.org/IService1/Authentication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fueltypeget">
+      <soap:operation soapAction="http://tempuri.org/IService1/Fueltypeget" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getstartwork">
+      <soap:operation soapAction="http://tempuri.org/IService1/getstartwork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Business_employe">
+      <soap:operation soapAction="http://tempuri.org/IService1/Business_employe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowReviewsTable">
+      <soap:operation soapAction="http://tempuri.org/IService1/ShowReviewsTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowRepairTable">
+      <soap:operation soapAction="http://tempuri.org/IService1/ShowRepairTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowOrderTable">
+      <soap:operation soapAction="http://tempuri.org/IService1/ShowOrderTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewReview">
+      <soap:operation soapAction="http://tempuri.org/IService1/NewReview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowEditReview">
+      <soap:operation soapAction="http://tempuri.org/IService1/ShowEditReview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEditReview">
+      <soap:operation soapAction="http://tempuri.org/IService1/SaveEditReview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewRepair">
+      <soap:operation soapAction="http://tempuri.org/IService1/NewRepair" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditRepair">
+      <soap:operation soapAction="http://tempuri.org/IService1/EditRepair" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowEditRepair">
+      <soap:operation soapAction="http://tempuri.org/IService1/ShowEditRepair" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewOrder">
+      <soap:operation soapAction="http://tempuri.org/IService1/NewOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClientOptionStatus">
+      <soap:operation soapAction="http://tempuri.org/IService1/ClientOptionStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BillSave">
+      <soap:operation soapAction="http://tempuri.org/IService1/BillSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendOrderEmial">
+      <soap:operation soapAction="http://tempuri.org/IService1/SendOrderEmial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:56054/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

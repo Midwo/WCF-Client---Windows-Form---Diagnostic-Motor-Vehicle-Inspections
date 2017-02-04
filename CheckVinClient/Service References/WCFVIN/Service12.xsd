@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56054/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic" />
+  <xs:element name="Authentication">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loginNamecrypt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="passwordcrypt" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AuthenticationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Fueltypeget">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic" minOccurs="0" name="all" nillable="true" type="q1:Enums" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FueltypegetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FueltypegetResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getstartwork">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getstartworkResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getstartworkResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Business_employe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Business_employeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Business_employeResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShowReviewsTable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VIN" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShowReviewsTableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ShowReviewsTableResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShowRepairTable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VIN" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShowRepairTableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ShowRepairTableResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShowOrderTable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BusinessName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShowOrderTableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ShowOrderTableResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewReview">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WhoReviewsBusinessName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WhereReviewsBusinessName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Mileage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Colour" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WhoReviewEmployee" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Brakes" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Damper" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Exhaust" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Convergence" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="light" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Vin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fuel" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewReviewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NewReviewResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShowEditReview">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VIN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BusinessName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShowEditReviewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ShowEditReviewResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveEditReview">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic" minOccurs="0" name="Save" nillable="true" type="q2:Review" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveEditReviewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveEditReviewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewRepair">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic" minOccurs="0" name="composite" nillable="true" type="q3:Repair" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewRepairResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NewRepairResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditRepair">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic" minOccurs="0" name="composite" nillable="true" type="q4:Repair" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditRepairResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EditRepairResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShowEditRepair">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VIN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BusinessName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShowEditRepairResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ShowEditRepairResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic" minOccurs="0" name="composite" nillable="true" type="q5:Order" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NewOrderResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClientOptionStatus">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClientOptionStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ClientOptionStatusResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BillSave">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic" minOccurs="0" name="component" nillable="true" type="q6:Bill" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BillSaveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BillSaveResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendOrderEmial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic" minOccurs="0" name="option" nillable="true" type="q7:ContractIServiceSendEmailOrder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendOrderEmialResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendOrderEmialResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

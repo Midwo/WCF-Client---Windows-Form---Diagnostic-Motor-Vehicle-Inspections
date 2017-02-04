@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Enums">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="All" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fueltypeenum" type="tns:Fueltypeenum" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Enums" nillable="true" type="tns:Enums" />
+  <xs:simpleType name="Fueltypeenum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PB" />
+      <xs:enumeration value="LPG" />
+      <xs:enumeration value="Diesel" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Fueltypeenum" nillable="true" type="tns:Fueltypeenum" />
+  <xs:complexType name="Review">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Brakes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Colour" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Convergence" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Damper" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateReviews" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Exhaust" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fuel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Light" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mileage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhereReviews" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhoReviewEnployee" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhoReviews" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Review" nillable="true" type="tns:Review" />
+  <xs:complexType name="Repair">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cost" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Mileage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RepairDescrition" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReplacedParts" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhereRepairbusiness" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhoRepairEmployee" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhoRepairbusiness" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Repair" nillable="true" type="tns:Repair" />
+  <xs:complexType name="Order">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cost" type="xs:float" />
+      <xs:element minOccurs="0" name="DateSend" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Items" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Send" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhenDateNecessary" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="WhereOrder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhoOrderBusiness" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhoOrderEmployee" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Order" nillable="true" type="tns:Order" />
+  <xs:complexType name="Bill">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cost" type="xs:float" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Employee" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InformationClient" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceivedCash" type="xs:float" />
+      <xs:element minOccurs="0" name="Rest" type="xs:float" />
+      <xs:element minOccurs="0" name="TypePayment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="What" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhereBusiness" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhoBill" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhoBusiness" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Bill" nillable="true" type="tns:Bill" />
+  <xs:complexType name="ContractIServiceSendEmailOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateNecessary" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Who" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContractIServiceSendEmailOrder" nillable="true" type="tns:ContractIServiceSendEmailOrder" />
+</xs:schema>

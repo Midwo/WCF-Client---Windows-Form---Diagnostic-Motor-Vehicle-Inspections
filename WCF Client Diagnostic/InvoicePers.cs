@@ -114,6 +114,7 @@ namespace WCF_Client_Diagnostic
 
             e.Graphics.DrawString("______________________________________", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(450, 900));
             e.Graphics.DrawString("Rubber stamp and signature", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(520, 920));
+          
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
