@@ -34,9 +34,26 @@ namespace CheckVinClient
             {
                 if (maskedTextBoxPassword.Text.Trim() != string.Empty)
                 {
+                    EncryptDecrypt hash = new EncryptDecrypt();
+                    WCFVIN.CheckVinClient_Account component = new WCFVIN.CheckVinClient_Account();
+                    component.AdressEmail = hash.encrypt(textBoxEmail.Text);
+                    component.Password = hash.encrypt(maskedTextBoxPassword.Text);
 
+                    WCFVIN.Service1Client send = new WCFVIN.Service1Client();
 
-                    MessageBox.Show("mamy to", "Error - email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                  bool response =  send.CheckVinClient_SingIn(component);
+
+                    if (response == true)
+                    {
+                        Menu m = new Menu();
+                        m.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Enter a valid password or adress email", "Error - email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
 
                 }
                 else

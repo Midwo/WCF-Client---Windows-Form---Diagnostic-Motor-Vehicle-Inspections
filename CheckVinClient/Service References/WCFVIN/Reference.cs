@@ -1017,6 +1017,9 @@ namespace CheckVinClient.WCFVIN {
         private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PhoneField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -1054,6 +1057,19 @@ namespace CheckVinClient.WCFVIN {
                 if ((object.ReferenceEquals(this.NameField, value) != true)) {
                     this.NameField = value;
                     this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
                 }
             }
         }
@@ -1213,6 +1229,12 @@ namespace CheckVinClient.WCFVIN {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CheckVinClient_NewAccount", ReplyAction="http://tempuri.org/IService1/CheckVinClient_NewAccountResponse")]
         System.Threading.Tasks.Task<string> CheckVinClient_NewAccountAsync(CheckVinClient.WCFVIN.CheckVinClient_Account component);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CheckVinClient_SingIn", ReplyAction="http://tempuri.org/IService1/CheckVinClient_SingInResponse")]
+        bool CheckVinClient_SingIn(CheckVinClient.WCFVIN.CheckVinClient_Account component);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CheckVinClient_SingIn", ReplyAction="http://tempuri.org/IService1/CheckVinClient_SingInResponse")]
+        System.Threading.Tasks.Task<bool> CheckVinClient_SingInAsync(CheckVinClient.WCFVIN.CheckVinClient_Account component);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1384,6 +1406,14 @@ namespace CheckVinClient.WCFVIN {
         
         public System.Threading.Tasks.Task<string> CheckVinClient_NewAccountAsync(CheckVinClient.WCFVIN.CheckVinClient_Account component) {
             return base.Channel.CheckVinClient_NewAccountAsync(component);
+        }
+        
+        public bool CheckVinClient_SingIn(CheckVinClient.WCFVIN.CheckVinClient_Account component) {
+            return base.Channel.CheckVinClient_SingIn(component);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CheckVinClient_SingInAsync(CheckVinClient.WCFVIN.CheckVinClient_Account component) {
+            return base.Channel.CheckVinClient_SingInAsync(component);
         }
     }
 }

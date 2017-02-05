@@ -116,6 +116,12 @@
   <wsdl:message name="IService1_CheckVinClient_NewAccount_OutputMessage">
     <wsdl:part name="parameters" element="tns:CheckVinClient_NewAccountResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_CheckVinClient_SingIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckVinClient_SingIn" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CheckVinClient_SingIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckVinClient_SingInResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="Authentication">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/Authentication" message="tns:IService1_Authentication_InputMessage" />
@@ -188,6 +194,10 @@
     <wsdl:operation name="CheckVinClient_NewAccount">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/CheckVinClient_NewAccount" message="tns:IService1_CheckVinClient_NewAccount_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/CheckVinClient_NewAccountResponse" message="tns:IService1_CheckVinClient_NewAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckVinClient_SingIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CheckVinClient_SingIn" message="tns:IService1_CheckVinClient_SingIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CheckVinClient_SingInResponse" message="tns:IService1_CheckVinClient_SingIn_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -347,6 +357,15 @@
     </wsdl:operation>
     <wsdl:operation name="CheckVinClient_NewAccount">
       <soap:operation soapAction="http://tempuri.org/IService1/CheckVinClient_NewAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckVinClient_SingIn">
+      <soap:operation soapAction="http://tempuri.org/IService1/CheckVinClient_SingIn" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

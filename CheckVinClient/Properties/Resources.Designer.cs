@@ -79,5 +79,35 @@ namespace CheckVinClient.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_newspaper_13_240 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-newspaper-13-240", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_task_1_240 {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-task-1-240", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconmonstr_wrench_24_240_1_ {
+            get {
+                object obj = ResourceManager.GetObject("iconmonstr-wrench-24-240(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

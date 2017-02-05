@@ -92,6 +92,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="AdressEmail" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Surname" nillable="true" type="xs:string" />
     </xs:sequence>

@@ -349,4 +349,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="CheckVinClient_SingIn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WCFservice_diagnostic" minOccurs="0" name="component" nillable="true" type="q9:CheckVinClient_Account" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckVinClient_SingInResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckVinClient_SingInResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
