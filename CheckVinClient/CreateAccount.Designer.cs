@@ -32,7 +32,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.maskedTextBoxPhone = new System.Windows.Forms.MaskedTextBox();
             this.labelEmail = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,8 +42,6 @@
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxSurname = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.maskedTextBoxPhone = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -78,6 +78,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Create account";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(13, 177);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 53);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Create Account";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
@@ -103,6 +114,15 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(514, 146);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // maskedTextBoxPhone
+            // 
+            this.maskedTextBoxPhone.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.maskedTextBoxPhone.Location = new System.Drawing.Point(151, 114);
+            this.maskedTextBoxPhone.Mask = "+48-000-000-000";
+            this.maskedTextBoxPhone.Name = "maskedTextBoxPhone";
+            this.maskedTextBoxPhone.Size = new System.Drawing.Size(357, 26);
+            this.maskedTextBoxPhone.TabIndex = 2;
             // 
             // labelEmail
             // 
@@ -171,26 +191,6 @@
             this.textBoxSurname.Name = "textBoxSurname";
             this.textBoxSurname.Size = new System.Drawing.Size(357, 26);
             this.textBoxSurname.TabIndex = 8;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(13, 177);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 53);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Create Account";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // maskedTextBoxPhone
-            // 
-            this.maskedTextBoxPhone.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.maskedTextBoxPhone.Location = new System.Drawing.Point(151, 114);
-            this.maskedTextBoxPhone.Mask = "+48-000-000-000";
-            this.maskedTextBoxPhone.Name = "maskedTextBoxPhone";
-            this.maskedTextBoxPhone.Size = new System.Drawing.Size(357, 26);
-            this.maskedTextBoxPhone.TabIndex = 2;
             // 
             // CreateAccount
             // 

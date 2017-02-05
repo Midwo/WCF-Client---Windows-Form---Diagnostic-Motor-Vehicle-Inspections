@@ -25,7 +25,9 @@ namespace CheckVinClient
 
         private void buttonSignIn_Click(object sender, EventArgs e)
         {
-
+            SignIn m = new SignIn();
+            m.Show();
+            this.Hide();
         }
     }
 }
