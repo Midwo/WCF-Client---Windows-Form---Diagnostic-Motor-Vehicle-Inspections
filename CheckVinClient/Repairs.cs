@@ -53,8 +53,8 @@ namespace CheckVinClient
             e.Graphics.DrawString("Selected VIN: " + Global.VIN + "", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(270, 170));
             e.Graphics.DrawString("Date create report: " + DateTime.Now + "", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(250, 190));
             e.Graphics.DrawString("__________________________________________________________________________________", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 200));
-
-            float currentY = 240;
+            int NumberReport = dataGridView1.Rows.Count - 1;
+            int currentY = 240;
             int RowsNumber = 0;
             while (Number+1 <= dataGridView1.Rows.Count-1) 
             {
@@ -68,49 +68,89 @@ namespace CheckVinClient
                 //6 - repair - business address
                 //7 - date repair
                 //8 - repair employee
-                e.Graphics.DrawString(dataGridView1.Rows[RowsNumber].Cells[0].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, 50, currentY);
+                e.Graphics.DrawString("Nr.: " + NumberReport, new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(25, currentY));
+                currentY += 40;
+                e.Graphics.DrawString("Repair date: " + dataGridView1.Rows[RowsNumber].Cells[7].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, currentY));
+                e.Graphics.DrawString("Number VIN: " + dataGridView1.Rows[RowsNumber].Cells[0].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(543, currentY));
+                e.Graphics.DrawString("____________________________", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(543, currentY));
                 currentY += 20;
-                e.Graphics.DrawString(dataGridView1.Rows[RowsNumber].Cells[1].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, 50, currentY);
+                e.Graphics.DrawString("Business name: " + dataGridView1.Rows[RowsNumber].Cells[5].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, currentY));
                 currentY += 20;
-
-
-                string measureString = "Measure String 232 3 2 32 3 Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 3 koniec";
+                e.Graphics.DrawString("Business address: " + dataGridView1.Rows[RowsNumber].Cells[6].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, currentY));
+                currentY += 20;
+                e.Graphics.DrawString("Employee: " + dataGridView1.Rows[RowsNumber].Cells[8].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, currentY));
+                e.Graphics.DrawString("Cost: " + dataGridView1.Rows[RowsNumber].Cells[4].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(543, currentY));
+                e.Graphics.DrawString("____________________________", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(543, currentY));
+                currentY += 40;
+                e.Graphics.DrawString("Repair description: ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, currentY));
+                currentY += 20;
+                string Parts = "Measure String 232 3 2 32 3 Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 3 koniec";
                 Font stringFont = new Font("Arial", 12);
 
 
-                // description and parts
-                #region description and parts
-                var x = measureString.Length;
-                int y = 400;
-                int ile = 20;
+                // description
+                #region description
+                var x = Parts.Length;
+              
+                int ile = 94;
                 int start = 0;
                 do
                 {
-                    if (start + ile > measureString.Length)
+                    if (start + ile > Parts.Length)
                     {
-                        int o = measureString.Length - start;
-                        string x1 = measureString.Substring(start, o);
-                        e.Graphics.DrawString(x1, stringFont, Brushes.Black, new PointF(200, y));
-                        y += 20;
+                        int o = Parts.Length - start;
+                        string x1 = Parts.Substring(start, o);
+                        e.Graphics.DrawString(x1, stringFont, Brushes.Black, new PointF(50, currentY));
+                        currentY += 20;
                         start += ile;
                         x -= ile;
                     }
                     else
                     {
 
-                        string x1 = measureString.Substring(start, ile);
-                        e.Graphics.DrawString(x1, stringFont, Brushes.Black, new PointF(200, y));
-                        y += 20;
+                        string x1 = Parts.Substring(start, ile);
+                        e.Graphics.DrawString(x1, stringFont, Brushes.Black, new PointF(50, currentY));
+                        currentY += 20;
                         start += ile;
                         x -= ile;
                 }
                 } while (0 < x);
-                #endregion
 
-                
+                currentY += 40;
+                e.Graphics.DrawString("Repair parts: ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, currentY));
+                currentY += 20;
+                #endregion
+                // parts
+                #region parts
+                x = Parts.Length;
+                start = 0;
+                do
+                {
+                    if (start + ile > Parts.Length)
+                    {
+                        int o = Parts.Length - start;
+                        string x1 = Parts.Substring(start, o);
+                        e.Graphics.DrawString(x1, stringFont, Brushes.Black, new PointF(50, currentY));
+                        currentY += 20;
+                        start += ile;
+                        x -= ile;
+                    }
+                    else
+                    {
+
+                        string x1 = Parts.Substring(start, ile);
+                        e.Graphics.DrawString(x1, stringFont, Brushes.Black, new PointF(50, currentY));
+                        currentY += 20;
+                        start += ile;
+                        x -= ile;
+                    }
+                } while (0 < x);
+                #endregion
+                currentY += 100;
                 RowsNumber += 1;
-                Number += 1; 
-                if (PerPageItem < 25) 
+                Number += 1;
+                NumberReport -= 1;
+                if (PerPageItem < 1) 
                 {
                     PerPageItem += 1; 
                     e.HasMorePages = false; 
