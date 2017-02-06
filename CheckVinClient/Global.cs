@@ -9,5 +9,8 @@ namespace CheckVinClient
     public class Global
     {
         public static string VIN;
+
+        // 0 - error, 1 - good
+        public static int Error;
     }
 }

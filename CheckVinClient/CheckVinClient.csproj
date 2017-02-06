@@ -184,6 +184,11 @@
   <ItemGroup>
     <None Include="Resources\iconmonstr-task-1-240.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\2017-02-06 at 03-47.png" />
+    <None Include="Resources\2017-02-06 at 03-471.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

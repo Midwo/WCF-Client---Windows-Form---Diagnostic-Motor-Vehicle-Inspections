@@ -33,8 +33,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBoxVin = new System.Windows.Forms.TextBox();
             this.buttonVIN = new System.Windows.Forms.Button();
+            this.textBoxVin = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.labelVIN = new System.Windows.Forms.Label();
             this.buttonReviewsHistory = new System.Windows.Forms.Button();
@@ -90,14 +90,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "VIN number:";
             // 
-            // textBoxVin
-            // 
-            this.textBoxVin.Location = new System.Drawing.Point(6, 25);
-            this.textBoxVin.Name = "textBoxVin";
-            this.textBoxVin.Size = new System.Drawing.Size(356, 26);
-            this.textBoxVin.TabIndex = 0;
-            this.textBoxVin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxVin_KeyDown);
-            // 
             // buttonVIN
             // 
             this.buttonVIN.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -108,6 +100,15 @@
             this.buttonVIN.Text = "Add";
             this.buttonVIN.UseVisualStyleBackColor = false;
             this.buttonVIN.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBoxVin
+            // 
+            this.textBoxVin.Location = new System.Drawing.Point(6, 25);
+            this.textBoxVin.Name = "textBoxVin";
+            this.textBoxVin.Size = new System.Drawing.Size(356, 26);
+            this.textBoxVin.TabIndex = 0;
+            this.textBoxVin.Text = "12345678912345678";
+            this.textBoxVin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxVin_KeyDown);
             // 
             // groupBox4
             // 

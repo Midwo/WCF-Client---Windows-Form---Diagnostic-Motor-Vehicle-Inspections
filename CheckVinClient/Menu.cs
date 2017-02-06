@@ -52,12 +52,29 @@ namespace CheckVinClient
 
         private void buttonReviewsHistory_Click(object sender, EventArgs e)
         {
+            Reviews m = new Reviews();
+            if (Global.Error == 0)
+            {
+                MessageBox.Show("Not found this information with this number VIN", "Error - Not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                m.ShowDialog();
+            }
 
         }
 
         private void buttonRepairsHistory_Click(object sender, EventArgs e)
         {
-
+            Repairs m = new Repairs();
+            if (Global.Error == 0)
+            {
+                MessageBox.Show("Not found this information with this number VIN", "Error - Not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                m.ShowDialog();
+            }
         }
     }
 }

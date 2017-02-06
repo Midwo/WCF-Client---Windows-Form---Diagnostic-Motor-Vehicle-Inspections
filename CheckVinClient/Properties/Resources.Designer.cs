@@ -63,6 +63,16 @@ namespace CheckVinClient.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2017_02_06_at_03_47 {
+            get {
+                object obj = ResourceManager.GetObject("2017-02-06 at 03-47", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconmonstr_edit_11_240 {
             get {
                 object obj = ResourceManager.GetObject("iconmonstr-edit-11-240", resourceCulture);

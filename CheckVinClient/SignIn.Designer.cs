@@ -115,6 +115,7 @@
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(333, 26);
             this.textBoxEmail.TabIndex = 6;
+            this.textBoxEmail.Text = "michal.dwojak92@gmail.com";
             this.textBoxEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxEmail_KeyDown);
             // 
             // maskedTextBoxPassword
@@ -125,6 +126,7 @@
             this.maskedTextBoxPassword.PasswordChar = '#';
             this.maskedTextBoxPassword.Size = new System.Drawing.Size(333, 26);
             this.maskedTextBoxPassword.TabIndex = 7;
+            this.maskedTextBoxPassword.Text = "E25A2B6F-2765-4655-8D3C-73B6E50BBD57";
             this.maskedTextBoxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.maskedTextBoxPassword_KeyDown);
             // 
             // menuStrip1
