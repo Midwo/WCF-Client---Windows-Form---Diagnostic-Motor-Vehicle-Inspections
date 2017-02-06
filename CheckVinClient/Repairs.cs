@@ -13,8 +13,7 @@ namespace CheckVinClient
 {
     public partial class Repairs : Form
     {
-        //int i = 0;
-
+     
         PaperSize paperSize = new PaperSize("papersize", 850, 1350);
         int Number = 0;
         int PerPageItem = 0;
@@ -56,8 +55,8 @@ namespace CheckVinClient
             e.Graphics.DrawString("__________________________________________________________________________________", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 200));
 
             float currentY = 240;
-
-            while (Number <= 170) 
+            int RowsNumber = 0;
+            while (Number+1 <= dataGridView1.Rows.Count-1) 
             {
                 //cells info
                 //0 - number vin
@@ -69,9 +68,12 @@ namespace CheckVinClient
                 //6 - repair - business address
                 //7 - date repair
                 //8 - repair employee
-                e.Graphics.DrawString(dataGridView1.Rows[0].Cells[0].Value.ToString(), DefaultFont, Brushes.Black, 50, currentY);
-                e.Graphics.DrawString(dataGridView1.Rows[0].Cells[1].Value.ToString(), DefaultFont, Brushes.Black, 50, currentY+20);
+                e.Graphics.DrawString(dataGridView1.Rows[RowsNumber].Cells[0].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, 50, currentY);
                 currentY += 20;
+                e.Graphics.DrawString(dataGridView1.Rows[RowsNumber].Cells[1].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, 50, currentY);
+                currentY += 20;
+
+
                 string measureString = "Measure String 232 3 2 32 3 Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 3 koniec";
                 Font stringFont = new Font("Arial", 12);
 
@@ -105,8 +107,8 @@ namespace CheckVinClient
                 } while (0 < x);
                 #endregion
 
-                currentY += 20;
-
+                
+                RowsNumber += 1;
                 Number += 1; 
                 if (PerPageItem < 25) 
                 {
