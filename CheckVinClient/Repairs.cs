@@ -53,10 +53,10 @@ namespace CheckVinClient
             e.Graphics.DrawString("Selected VIN: " + Global.VIN + "", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(270, 170));
             e.Graphics.DrawString("Date create report: " + DateTime.Now + "", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(250, 190));
             e.Graphics.DrawString("__________________________________________________________________________________", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 200));
-            int NumberReport = dataGridView1.Rows.Count - 1;
+
             int currentY = 240;
-            int RowsNumber = 0;
-            while (Number+1 <= dataGridView1.Rows.Count-1) 
+  
+            while (Number <= dataGridView1.Rows.Count-2) 
             {
                 //cells info
                 //0 - number vin
@@ -68,26 +68,26 @@ namespace CheckVinClient
                 //6 - repair - business address
                 //7 - date repair
                 //8 - repair employee
-                e.Graphics.DrawString("Nr.: " + NumberReport, new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(25, currentY));
+                e.Graphics.DrawString("Nr.: " + (Number+1), new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(25, currentY));
                 currentY += 40;
-                e.Graphics.DrawString("Repair date: " + dataGridView1.Rows[RowsNumber].Cells[7].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, currentY));
-                e.Graphics.DrawString("Number VIN: " + dataGridView1.Rows[RowsNumber].Cells[0].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(543, currentY));
+                e.Graphics.DrawString("Repair date: " + dataGridView1.Rows[Number].Cells[7].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, currentY));
+                e.Graphics.DrawString("Number VIN: " + dataGridView1.Rows[Number].Cells[0].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(543, currentY));
                 e.Graphics.DrawString("____________________________", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(543, currentY));
                 currentY += 20;
-                e.Graphics.DrawString("Business name: " + dataGridView1.Rows[RowsNumber].Cells[5].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, currentY));
+                e.Graphics.DrawString("Business name: " + dataGridView1.Rows[Number].Cells[5].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, currentY));
                 currentY += 20;
-                e.Graphics.DrawString("Business address: " + dataGridView1.Rows[RowsNumber].Cells[6].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, currentY));
+                e.Graphics.DrawString("Business address: " + dataGridView1.Rows[Number].Cells[6].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, currentY));
                 currentY += 20;
-                e.Graphics.DrawString("Employee: " + dataGridView1.Rows[RowsNumber].Cells[8].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, currentY));
-                e.Graphics.DrawString("Cost: " + dataGridView1.Rows[RowsNumber].Cells[4].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(543, currentY));
+                e.Graphics.DrawString("Employee: " + dataGridView1.Rows[Number].Cells[8].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, currentY));
+                e.Graphics.DrawString("Cost: " + dataGridView1.Rows[Number].Cells[4].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(543, currentY));
                 e.Graphics.DrawString("____________________________", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(543, currentY));
                 currentY += 40;
                 e.Graphics.DrawString("Repair description: ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, currentY));
                 currentY += 20;
-                string Parts = "Measure String 232 3 2 32 3 Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 32 3Measure String 232 3 2 3 koniec";
+                string Parts = dataGridView1.Rows[Number].Cells[2].Value.ToString();
                 Font stringFont = new Font("Arial", 12);
-
-
+       
+  
                 // description
                 #region description
                 var x = Parts.Length;
@@ -120,6 +120,7 @@ namespace CheckVinClient
                 e.Graphics.DrawString("Repair parts: ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, currentY));
                 currentY += 20;
                 #endregion
+                Parts = dataGridView1.Rows[Number].Cells[3].Value.ToString();
                 // parts
                 #region parts
                 x = Parts.Length;
@@ -146,10 +147,10 @@ namespace CheckVinClient
                     }
                 } while (0 < x);
                 #endregion
+
                 currentY += 100;
-                RowsNumber += 1;
                 Number += 1;
-                NumberReport -= 1;
+     
                 if (PerPageItem < 1) 
                 {
                     PerPageItem += 1; 
@@ -162,55 +163,6 @@ namespace CheckVinClient
                     return;
                 }
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-            //int x = 25;
-            //int y = 240;
-            //i = 0;
-            //e.Graphics.DrawImage(Properties.Resources._2017_02_06_at_03_47, 20, 10, 800, 140);
-            //e.Graphics.DrawString("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 140));
-            //e.Graphics.DrawString("Selected VIN: "+Global.VIN+"", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(270, 170));
-            //e.Graphics.DrawString("Date create report: "+DateTime.Now+"", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(250, 190));
-            //e.Graphics.DrawString("__________________________________________________________________________________", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 200));
-
-            //do
-            //{
-            //    e.Graphics.DrawString("Standard bill", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(x, y));
-
-            //    y = y + 20;
-            //    i++;
-            //} while (dataGridView1.RowCount > i+1);
-            //e.Graphics.DrawRectangle(Pens.Black, 100, 100, 26, 33);
-            //e.Graphics.DrawString("__________________________________________________________________________________", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new RectangleF(205, 25, 15, 15), 200);
-            //e.Graphics.DrawString("Standard bill", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 240));
-            //e.Graphics.DrawString("Date: " + DateTime.Now + "", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 260));
-            //e.Graphics.DrawString("Number: " + number.Id + "", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 280));
-            //e.Graphics.DrawString("__________________________________________________________________________________", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 320));
-            //e.Graphics.DrawString("Type Service: " + comboBox1.Text.ToString() + "", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 340));
-            //e.Graphics.DrawString("Quantity: 1", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(100, 360));
-            //e.Graphics.DrawString("Cost with tax 23%: " + textBox1.Text + "$", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(520, 360));
-            //e.Graphics.DrawString("Cost without tax 23%: " + (Convert.ToDecimal(textBox1.Text) * 0.77m) + "$", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(520, 380));
-            //e.Graphics.DrawString("__________________________________________________________________________________", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 400));
-            //e.Graphics.DrawString("Type payment: Card", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 420));
-            //e.Graphics.DrawString("Received cash: 0$", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(520, 440));
-            //e.Graphics.DrawString("Rest: 0$", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(520, 460));
-            //e.Graphics.DrawString("__________________________________________________________________________________", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 500));
-            //e.Graphics.DrawString("Information: account is debited", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 520));
-            //e.Graphics.DrawString("Dealer:", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 600));
-            //e.Graphics.DrawString("" + GlobalInformation.Name_Business + "", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(70, 620));
-            //e.Graphics.DrawString("" + GlobalInformation.Adress_Business + "", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(70, 640));
-            //e.Graphics.DrawString("Employee: " + GlobalInformation.Login + "", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(70, 660));
 
         }
     }
