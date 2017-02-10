@@ -56,7 +56,7 @@ namespace CheckVinClient
 
             int currentY = 240;
 
-            while (Number <= dataGridView1.Rows.Count - 3)
+            while (Number <= dataGridView1.Rows.Count - 2)
             {
                 //cells info
                 //0 - Review date
