@@ -12,5 +12,6 @@ namespace CheckVinClient
 
         // 0 - error, 1 - good
         public static int Error;
+        public static string version = "1.0 BETA";
     }
 }

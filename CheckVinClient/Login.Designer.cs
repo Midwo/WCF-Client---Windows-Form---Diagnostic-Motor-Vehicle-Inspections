@@ -31,10 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonSignIn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonCreateAccount = new System.Windows.Forms.Button();
-            this.buttonSignIn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -60,6 +61,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sign in";
             // 
+            // buttonSignIn
+            // 
+            this.buttonSignIn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonSignIn.BackgroundImage = global::CheckVinClient.Properties.Resources.iconmonstr_key_11_240;
+            this.buttonSignIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonSignIn.Location = new System.Drawing.Point(31, 38);
+            this.buttonSignIn.Name = "buttonSignIn";
+            this.buttonSignIn.Size = new System.Drawing.Size(180, 161);
+            this.buttonSignIn.TabIndex = 16;
+            this.buttonSignIn.UseVisualStyleBackColor = false;
+            this.buttonSignIn.Click += new System.EventHandler(this.buttonSignIn_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.buttonCreateAccount);
@@ -84,18 +97,6 @@
             this.buttonCreateAccount.UseVisualStyleBackColor = false;
             this.buttonCreateAccount.Click += new System.EventHandler(this.buttonCreateAccount_Click);
             // 
-            // buttonSignIn
-            // 
-            this.buttonSignIn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonSignIn.BackgroundImage = global::CheckVinClient.Properties.Resources.iconmonstr_key_11_240;
-            this.buttonSignIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonSignIn.Location = new System.Drawing.Point(31, 38);
-            this.buttonSignIn.Name = "buttonSignIn";
-            this.buttonSignIn.Size = new System.Drawing.Size(180, 161);
-            this.buttonSignIn.TabIndex = 16;
-            this.buttonSignIn.UseVisualStyleBackColor = false;
-            this.buttonSignIn.Click += new System.EventHandler(this.buttonSignIn_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Indigo;
@@ -118,7 +119,6 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -138,6 +138,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button buttonCreateAccount;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 
