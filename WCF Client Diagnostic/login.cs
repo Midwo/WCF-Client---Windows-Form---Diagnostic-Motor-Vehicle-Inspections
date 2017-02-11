@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,31 @@ namespace WCF_Client_Diagnostic
         public Login()
         {
             InitializeComponent();
-        }
+
+            try
+            {
+                WebRequest rq = WebRequest.Create("http://localhost:56054/version.txt");
+                rq.Credentials = CredentialCache.DefaultCredentials;
+                HttpWebResponse rp = (HttpWebResponse)rq.GetResponse();
+
+                Stream st = rp.GetResponseStream();
+                StreamReader sr = new StreamReader(st);
+                string odpowiedz = sr.ReadToEnd();
+                if (GlobalInformation.version != odpowiedz)
+                    if (MessageBox.Show("New version is available:  " + odpowiedz + "\n Download now?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                        {
+                            WebClient klient = new WebClient();
+                            klient.DownloadFile("http://www.mdwojak.pl/hmm1.txt", saveFileDialog1.FileName); // this location your new program - zip/tar.
+                        }
+            }
+            catch
+            {
+                MessageBox.Show("Error - check version", "Error connected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        
+    }
         Crypt crypt = new Crypt();
 
         private void pictureBox1_Click(object sender, EventArgs e)

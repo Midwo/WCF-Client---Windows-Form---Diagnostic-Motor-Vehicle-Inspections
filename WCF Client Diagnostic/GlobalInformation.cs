@@ -14,5 +14,6 @@ namespace WCF_Client_Diagnostic
         public static string VIN;
         public static int Error;
         public static string ID;
+        public static string version = "1.0 Beta";
     }
 }
